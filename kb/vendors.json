@@ -1,0 +1,989 @@
+{
+  "_comment": "secdepmap vendor knowledge base. Each vendor: identifiers seen on hosts (match) and where it publishes security information (links). Run 'secdepmap kb verify' to re-check every link; 'links_verified' records the last successful check. Add site-specific vendors in /etc/secdepmap/kb.d/*.json using the same schema.",
+  "vendors": [
+    {
+      "id": "canonical",
+      "name": "Canonical (Ubuntu)",
+      "kind": "os-vendor",
+      "domains": [
+        "ubuntu.com",
+        "canonical.com",
+        "snapcraft.io"
+      ],
+      "match": {
+        "os_id": [
+          "ubuntu"
+        ],
+        "apt_origin": [
+          "Ubuntu",
+          "UbuntuESM",
+          "UbuntuESMApps",
+          "UbuntuFIPS*",
+          "UbuntuCC",
+          "UbuntuCIS",
+          "UbuntuROS*",
+          "UbuntuRealtime*"
+        ],
+        "url_host": [
+          "archive.ubuntu.com",
+          "*.archive.ubuntu.com",
+          "security.ubuntu.com",
+          "ports.ubuntu.com",
+          "esm.ubuntu.com",
+          "*.clouds.archive.ubuntu.com",
+          "api.snapcraft.io"
+        ],
+        "snap_publisher": [
+          "canonical"
+        ],
+        "maintainer_domain": [
+          "lists.ubuntu.com",
+          "ubuntu.com",
+          "canonical.com"
+        ],
+        "key_uid_domain": [
+          "ubuntu.com",
+          "canonical.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://ubuntu.com/security/notices",
+        "cve_tracker": "https://ubuntu.com/security/cves",
+        "disclosure_policy": "https://ubuntu.com/security/disclosure-policy",
+        "lifecycle": "https://ubuntu.com/about/release-cycle",
+        "oval": "https://security-metadata.canonical.com/oval/",
+        "osv_feed": "https://github.com/canonical/ubuntu-security-notices",
+        "extended_support": "https://ubuntu.com/pro"
+      },
+      "osv_ecosystem": "Ubuntu",
+      "support_model": "Distribution security team. main/restricted: 5 years standard security maintenance per LTS. universe/multiverse: community best-effort unless Ubuntu Pro (ESM-Apps) is attached. Snaps: publisher is responsible for updates; the Snap Store distributes and verifies them."
+    },
+    {
+      "id": "launchpad-ppa",
+      "name": "Launchpad PPA (individual maintainers)",
+      "kind": "community-repository",
+      "domains": [
+        "launchpad.net"
+      ],
+      "match": {
+        "url_host": [
+          "ppa.launchpad.net",
+          "ppa.launchpadcontent.net",
+          "private-ppa.launchpadcontent.net"
+        ],
+        "apt_origin": [
+          "LP-PPA-*"
+        ]
+      },
+      "links": {
+        "documentation": "https://ubuntu.com/docs/launchpad/user/Packaging/PPA/"
+      },
+      "support_model": "Built on Canonical infrastructure but maintained by an individual or team. No Canonical security commitment; check the PPA owner."
+    },
+    {
+      "id": "debian",
+      "name": "Debian Project",
+      "kind": "os-vendor",
+      "domains": [
+        "debian.org"
+      ],
+      "match": {
+        "os_id": [
+          "debian"
+        ],
+        "apt_origin": [
+          "Debian",
+          "Debian Backports"
+        ],
+        "url_host": [
+          "deb.debian.org",
+          "security.debian.org",
+          "*.debian.org",
+          "debian.map.fastlydns.net"
+        ],
+        "maintainer_domain": [
+          "lists.debian.org",
+          "debian.org",
+          "alioth-lists.debian.net"
+        ],
+        "key_uid_domain": [
+          "debian.org"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.debian.org/security/",
+        "cve_tracker": "https://security-tracker.debian.org/tracker/",
+        "lifecycle": "https://wiki.debian.org/LTS",
+        "osv_feed": "https://security-tracker.debian.org/tracker/data/json"
+      },
+      "osv_ecosystem": "Debian",
+      "support_model": "Debian Security Team for stable (~3 years), then Debian LTS (volunteer/funded) to ~5 years."
+    },
+    {
+      "id": "redhat",
+      "name": "Red Hat",
+      "kind": "os-vendor",
+      "domains": [
+        "redhat.com"
+      ],
+      "match": {
+        "os_id": [
+          "rhel"
+        ],
+        "url_host": [
+          "*.redhat.com"
+        ],
+        "rpm_vendor": [
+          "Red Hat, Inc.*"
+        ],
+        "key_uid_domain": [
+          "redhat.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://access.redhat.com/security/security-updates/",
+        "csaf": "https://security.access.redhat.com/data/csaf/v2/",
+        "lifecycle": "https://access.redhat.com/support/policy/updates/errata"
+      },
+      "osv_ecosystem": "Red Hat",
+      "support_model": "Commercial distribution security team (Product Security)."
+    },
+    {
+      "id": "fedora",
+      "name": "Fedora Project",
+      "kind": "os-vendor",
+      "domains": [
+        "fedoraproject.org"
+      ],
+      "match": {
+        "os_id": [
+          "fedora"
+        ],
+        "url_host": [
+          "*.fedoraproject.org"
+        ],
+        "rpm_vendor": [
+          "Fedora Project"
+        ],
+        "key_uid_domain": [
+          "fedoraproject.org"
+        ]
+      },
+      "links": {
+        "advisories": "https://bodhi.fedoraproject.org/updates/?type=security",
+        "lifecycle": "https://docs.fedoraproject.org/en-US/releases/lifecycle/"
+      },
+      "support_model": "Community distribution; each release supported ~13 months."
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "kind": "software-vendor",
+      "domains": [
+        "microsoft.com"
+      ],
+      "match": {
+        "url_host": [
+          "packages.microsoft.com"
+        ],
+        "maintainer_domain": [
+          "microsoft.com"
+        ],
+        "key_uid_domain": [
+          "microsoft.com"
+        ],
+        "snap_publisher": [
+          "microsoft*"
+        ]
+      },
+      "links": {
+        "advisories": "https://msrc.microsoft.com/update-guide",
+        "csaf": "https://msrc.microsoft.com/csaf/",
+        "security": "https://www.microsoft.com/en-us/msrc",
+        "release_notes_azure_cli": "https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli"
+      },
+      "support_model": "Vendor PSIRT (MSRC) with CVEs and CSAF documents."
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "kind": "software-vendor",
+      "domains": [
+        "google.com"
+      ],
+      "match": {
+        "url_host": [
+          "dl.google.com",
+          "packages.cloud.google.com",
+          "storage.googleapis.com",
+          "*.pkg.dev"
+        ],
+        "snap_publisher": [
+          "google-cloud-sdk",
+          "google"
+        ],
+        "maintainer_domain": [
+          "google.com"
+        ],
+        "key_uid_domain": [
+          "google.com"
+        ]
+      },
+      "links": {
+        "security": "https://bughunters.google.com/",
+        "advisories": "https://docs.cloud.google.com/support/bulletins",
+        "chrome_releases": "https://chromereleases.googleblog.com/",
+        "release_notes_gcloud": "https://docs.cloud.google.com/sdk/docs/release-notes"
+      },
+      "support_model": "Vendor PSIRT; product-specific release notes and bulletins."
+    },
+    {
+      "id": "mozilla",
+      "name": "Mozilla",
+      "kind": "software-vendor",
+      "domains": [
+        "mozilla.org"
+      ],
+      "match": {
+        "snap_publisher": [
+          "mozilla"
+        ],
+        "url_host": [
+          "packages.mozilla.org"
+        ],
+        "key_uid_domain": [
+          "mozilla.org",
+          "mozilla.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.mozilla.org/en-US/security/advisories/",
+        "bug_bounty": "https://www.mozilla.org/en-US/security/bug-bounty/"
+      },
+      "support_model": "Vendor security team; Mozilla Foundation Security Advisories (MFSA) per release."
+    },
+    {
+      "id": "brave",
+      "name": "Brave Software",
+      "kind": "software-vendor",
+      "domains": [
+        "brave.com"
+      ],
+      "match": {
+        "url_host": [
+          "*.brave.com",
+          "*.s3.brave.com"
+        ],
+        "maintainer_domain": [
+          "brave.com"
+        ],
+        "key_uid_domain": [
+          "brave.com"
+        ]
+      },
+      "links": {
+        "release_notes": "https://brave.com/latest/",
+        "bug_bounty": "https://hackerone.com/brave"
+      },
+      "support_model": "Vendor; Chromium security fixes delivered via frequent releases (release notes, HackerOne program)."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "kind": "software-vendor",
+      "domains": [
+        "anthropic.com"
+      ],
+      "match": {
+        "apt_origin": [
+          "Anthropic"
+        ],
+        "url_host": [
+          "downloads.claude.ai",
+          "*.anthropic.com"
+        ],
+        "maintainer_domain": [
+          "anthropic.com"
+        ],
+        "key_uid_domain": [
+          "anthropic.com"
+        ],
+        "path": [
+          "*/.local/share/claude/*",
+          "*/.claude/local/*"
+        ]
+      },
+      "links": {
+        "disclosure_policy": "https://www.anthropic.com/responsible-disclosure-policy",
+        "trust": "https://trust.anthropic.com/",
+        "advisories": "https://github.com/anthropics/claude-code/security/advisories"
+      },
+      "support_model": "Vendor; APT repository for Claude Desktop, self-updating CLI for Claude Code."
+    },
+    {
+      "id": "coolercontrol",
+      "name": "CoolerControl (open-source project)",
+      "kind": "open-source-project",
+      "domains": [
+        "coolercontrol.org"
+      ],
+      "match": {
+        "apt_origin": [
+          "CoolerControl"
+        ],
+        "url_host": [
+          "apt.coolercontrol.org"
+        ],
+        "maintainer_domain": [
+          "guyboldon.com"
+        ],
+        "key_uid_domain": [
+          "guyboldon.com"
+        ]
+      },
+      "links": {
+        "project": "https://gitlab.com/coolercontrol/coolercontrol"
+      },
+      "support_model": "Small open-source project; repository signed with the lead maintainer's personal key. No published security advisory process. Note: the daemon runs as root."
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "kind": "software-vendor",
+      "domains": [
+        "docker.com"
+      ],
+      "match": {
+        "url_host": [
+          "download.docker.com"
+        ],
+        "key_uid_domain": [
+          "docker.com"
+        ],
+        "maintainer_domain": [
+          "docker.com"
+        ]
+      },
+      "links": {
+        "security": "https://docs.docker.com/security/",
+        "advisories": "https://docs.docker.com/security/security-announcements/"
+      },
+      "support_model": "Vendor security team."
+    },
+    {
+      "id": "containerd",
+      "name": "containerd (CNCF)",
+      "kind": "open-source-project",
+      "domains": [
+        "containerd.io"
+      ],
+      "match": {
+        "path": [
+          "/opt/containerd*"
+        ]
+      },
+      "links": {
+        "advisories": "https://github.com/containerd/containerd/security/advisories"
+      },
+      "support_model": "CNCF project; GitHub security advisories. /opt/containerd is a runtime plugin directory usually created by Docker/containerd packages."
+    },
+    {
+      "id": "hashicorp",
+      "name": "HashiCorp",
+      "kind": "software-vendor",
+      "domains": [
+        "hashicorp.com",
+        "terraform.io"
+      ],
+      "match": {
+        "url_host": [
+          "apt.releases.hashicorp.com",
+          "rpm.releases.hashicorp.com"
+        ],
+        "key_uid_domain": [
+          "hashicorp.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://discuss.hashicorp.com/c/security",
+        "security": "https://www.hashicorp.com/security"
+      },
+      "support_model": "Vendor security team; advisories on HashiCorp Discuss."
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL / pgAdmin",
+      "kind": "open-source-project",
+      "domains": [
+        "postgresql.org",
+        "pgadmin.org"
+      ],
+      "match": {
+        "url_host": [
+          "apt.postgresql.org",
+          "ftp.postgresql.org",
+          "download.postgresql.org"
+        ],
+        "key_uid_domain": [
+          "postgresql.org",
+          "pgadmin.org"
+        ],
+        "maintainer_domain": [
+          "postgresql.org",
+          "pgadmin.org"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.postgresql.org/support/security/",
+        "pgadmin": "https://www.pgadmin.org/"
+      },
+      "support_model": "Community security team; per-release security advisories."
+    },
+    {
+      "id": "nodesource",
+      "name": "NodeSource",
+      "kind": "software-vendor",
+      "domains": [
+        "nodesource.com"
+      ],
+      "match": {
+        "url_host": [
+          "deb.nodesource.com",
+          "rpm.nodesource.com"
+        ],
+        "key_uid_domain": [
+          "nodesource.com"
+        ]
+      },
+      "links": {
+        "project": "https://github.com/nodesource/distributions"
+      },
+      "support_model": "Repackages Node.js releases; Node.js security releases come from the OpenJS Foundation."
+    },
+    {
+      "id": "openjs",
+      "name": "OpenJS Foundation (Node.js)",
+      "kind": "open-source-project",
+      "domains": [
+        "nodejs.org"
+      ],
+      "match": {
+        "path": [
+          "*/.nvm/versions/node/*"
+        ]
+      },
+      "links": {
+        "advisories": "https://nodejs.org/en/blog/vulnerability",
+        "lifecycle": "https://github.com/nodejs/release#release-schedule"
+      },
+      "osv_ecosystem": "npm",
+      "support_model": "Node.js security team; scheduled security releases for supported (LTS/current) lines only."
+    },
+    {
+      "id": "npm",
+      "name": "npm registry (GitHub)",
+      "kind": "package-registry",
+      "domains": [
+        "npmjs.com"
+      ],
+      "match": {
+        "url_host": [
+          "registry.npmjs.org",
+          "registry.yarnpkg.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://github.com/advisories?query=ecosystem%3Anpm"
+      },
+      "osv_ecosystem": "npm",
+      "support_model": "Open registry: anyone can publish. Security depends on each maintainer; advisories via the GitHub Advisory Database."
+    },
+    {
+      "id": "pypi",
+      "name": "Python Package Index (PSF)",
+      "kind": "package-registry",
+      "domains": [
+        "pypi.org",
+        "python.org"
+      ],
+      "match": {
+        "url_host": [
+          "pypi.org",
+          "files.pythonhosted.org"
+        ]
+      },
+      "links": {
+        "security": "https://pypi.org/security/",
+        "advisories": "https://github.com/pypa/advisory-database"
+      },
+      "osv_ecosystem": "PyPI",
+      "support_model": "Open registry: anyone can publish. Advisories via the PyPA advisory database / OSV."
+    },
+    {
+      "id": "crates-io",
+      "name": "crates.io (Rust Foundation)",
+      "kind": "package-registry",
+      "domains": [
+        "crates.io"
+      ],
+      "match": {
+        "url_host": [
+          "index.crates.io",
+          "static.crates.io",
+          "crates.io"
+        ]
+      },
+      "links": {
+        "advisories": "https://rustsec.org/"
+      },
+      "osv_ecosystem": "crates.io",
+      "support_model": "Open registry; advisories via RustSec / OSV."
+    },
+    {
+      "id": "rust",
+      "name": "Rust Project",
+      "kind": "open-source-project",
+      "domains": [
+        "rust-lang.org"
+      ],
+      "match": {
+        "url_host": [
+          "static.rust-lang.org"
+        ],
+        "path": [
+          "*/.rustup/*",
+          "*/.cargo/bin/*"
+        ]
+      },
+      "links": {
+        "security": "https://www.rust-lang.org/policies/security"
+      },
+      "support_model": "Rust security response WG; only the latest stable toolchain receives fixes."
+    },
+    {
+      "id": "flathub",
+      "name": "Flathub",
+      "kind": "app-store",
+      "domains": [
+        "flathub.org"
+      ],
+      "match": {
+        "flatpak_remote": [
+          "flathub",
+          "flathub-beta"
+        ],
+        "url_host": [
+          "dl.flathub.org",
+          "flathub.org"
+        ]
+      },
+      "links": {
+        "documentation": "https://docs.flathub.org/",
+        "verification": "https://docs.flathub.org/docs/for-app-authors/verification"
+      },
+      "support_model": "Community-run store. Many apps are packaged by volunteers rather than the upstream vendor (look for the 'verified' badge); runtimes come from freedesktop-sdk / GNOME / KDE."
+    },
+    {
+      "id": "lvfs",
+      "name": "Linux Vendor Firmware Service",
+      "kind": "firmware-store",
+      "domains": [
+        "fwupd.org"
+      ],
+      "match": {
+        "url_host": [
+          "fwupd.org",
+          "cdn.fwupd.org"
+        ]
+      },
+      "links": {
+        "project": "https://fwupd.org/",
+        "documentation": "https://lvfs.readthedocs.io/"
+      },
+      "support_model": "Distribution channel; firmware content and its security fixes come from each hardware vendor."
+    },
+    {
+      "id": "intel",
+      "name": "Intel",
+      "kind": "hardware-vendor",
+      "domains": [
+        "intel.com"
+      ],
+      "match": {
+        "hardware_vendor": [
+          "Intel*"
+        ],
+        "maintainer_domain": [
+          "intel.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.intel.com/content/www/us/en/security-center/default.html",
+        "microcode": "https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files"
+      },
+      "support_model": "Vendor PSIRT (Intel Product Security Center); microcode via OS packages or OEM BIOS updates."
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "kind": "hardware-vendor",
+      "domains": [
+        "amd.com"
+      ],
+      "match": {
+        "hardware_vendor": [
+          "AMD*",
+          "Advanced Micro Devices*"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.amd.com/en/resources/product-security.html"
+      },
+      "support_model": "Vendor PSIRT; microcode via linux-firmware/amd64-microcode or OEM BIOS."
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "kind": "hardware-vendor",
+      "domains": [
+        "nvidia.com"
+      ],
+      "match": {
+        "hardware_vendor": [
+          "NVIDIA*"
+        ],
+        "url_host": [
+          "developer.download.nvidia.com",
+          "nvidia.github.io"
+        ],
+        "maintainer_domain": [
+          "nvidia.com"
+        ],
+        "key_uid_domain": [
+          "nvidia.com"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.nvidia.com/en-us/security/"
+      },
+      "support_model": "Vendor PSIRT; GPU driver security bulletins (proprietary kernel module - taints the kernel)."
+    },
+    {
+      "id": "samsung-semi",
+      "name": "Samsung Semiconductor (SSD)",
+      "kind": "hardware-vendor",
+      "domains": [
+        "samsung.com"
+      ],
+      "match": {
+        "hardware_vendor": [
+          "Samsung*"
+        ]
+      },
+      "links": {
+        "firmware": "https://semiconductor.samsung.com/consumer-storage/support/tools/"
+      },
+      "support_model": "SSD firmware updates published by the vendor; rarely via LVFS."
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom Communications",
+      "kind": "software-vendor",
+      "domains": [
+        "zoom.us",
+        "zoom.com"
+      ],
+      "match": {
+        "maintainer_domain": [
+          "zoom.us",
+          "zoom.com"
+        ],
+        "path": [
+          "/opt/zoom*"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.zoom.com/en/trust/security-bulletin/"
+      },
+      "support_model": "Vendor PSIRT with a public security bulletin. Linux .deb has no APT repository; updates are manual."
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian (Dynalist Inc.)",
+      "kind": "software-vendor",
+      "domains": [
+        "obsidian.md"
+      ],
+      "match": {
+        "maintainer_domain": [
+          "obsidian.md"
+        ],
+        "path": [
+          "/opt/Obsidian*"
+        ]
+      },
+      "links": {
+        "security": "https://obsidian.md/security",
+        "release_notes": "https://obsidian.md/changelog/"
+      },
+      "support_model": "Vendor; app self-updates its asar bundle, the .deb itself only updates manually."
+    },
+    {
+      "id": "sublimehq",
+      "name": "Sublime HQ",
+      "kind": "software-vendor",
+      "domains": [
+        "sublimetext.com"
+      ],
+      "match": {
+        "url_host": [
+          "download.sublimetext.com"
+        ],
+        "maintainer_domain": [
+          "sublimetext.com",
+          "sublimehq.com"
+        ],
+        "key_uid_domain": [
+          "sublimetext.com"
+        ]
+      },
+      "links": {
+        "release_notes": "https://www.sublimetext.com/download"
+      },
+      "support_model": "Small vendor; no public advisory feed. Has an official APT repository (download.sublimetext.com)."
+    },
+    {
+      "id": "iit",
+      "name": "IIT (Information Technologies Institute, Kharkiv)",
+      "kind": "software-vendor",
+      "domains": [
+        "iit.com.ua",
+        "iit.kharkov.ua"
+      ],
+      "match": {
+        "maintainer_domain": [
+          "iit.kharkov.ua",
+          "iit.com.ua"
+        ],
+        "path": [
+          "/opt/iit*"
+        ]
+      },
+      "links": {
+        "homepage": "https://iit.com.ua/"
+      },
+      "support_model": "Vendor of qualified e-signature software (EUSW). No public security advisory feed; packages installed manually."
+    },
+    {
+      "id": "weasis",
+      "name": "Weasis (open-source DICOM viewer)",
+      "kind": "open-source-project",
+      "domains": [
+        "weasis.org"
+      ],
+      "match": {
+        "path": [
+          "/opt/weasis*"
+        ]
+      },
+      "links": {
+        "project": "https://github.com/nroduit/Weasis",
+        "releases": "https://github.com/nroduit/Weasis/releases"
+      },
+      "support_model": "Open-source project; bundles its own Java runtime - JRE fixes depend on new Weasis releases."
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "kind": "software-vendor",
+      "domains": [
+        "spotify.com"
+      ],
+      "match": {
+        "snap_publisher": [
+          "spotify"
+        ],
+        "url_host": [
+          "repository.spotify.com"
+        ]
+      },
+      "links": {
+        "bug_bounty": "https://hackerone.com/spotify"
+      },
+      "support_model": "Vendor; no public advisory feed for the desktop client."
+    },
+    {
+      "id": "videolan",
+      "name": "VideoLAN",
+      "kind": "open-source-project",
+      "domains": [
+        "videolan.org"
+      ],
+      "match": {
+        "snap_publisher": [
+          "videolan"
+        ],
+        "flatpak_app": [
+          "org.videolan.*"
+        ]
+      },
+      "links": {
+        "advisories": "https://www.videolan.org/security/"
+      },
+      "support_model": "Open-source project with published security bulletins."
+    },
+    {
+      "id": "slack",
+      "name": "Slack (Salesforce)",
+      "kind": "software-vendor",
+      "domains": [
+        "slack.com"
+      ],
+      "match": {
+        "flatpak_app": [
+          "com.slack.Slack"
+        ],
+        "snap_publisher": [
+          "slack"
+        ]
+      },
+      "links": {
+        "security": "https://slack.com/trust/security",
+        "bug_bounty": "https://hackerone.com/slack"
+      },
+      "support_model": "Vendor. The Flathub build is a community repackaging of the official binary."
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "kind": "software-vendor",
+      "domains": [
+        "telegram.org"
+      ],
+      "match": {
+        "flatpak_app": [
+          "org.telegram.desktop"
+        ],
+        "snap_publisher": [
+          "telegram-desktop"
+        ]
+      },
+      "links": {
+        "bug_bounty": "https://core.telegram.org/bug-bounty"
+      },
+      "support_model": "Vendor; open-source desktop client, no public advisory feed."
+    },
+    {
+      "id": "openprinting",
+      "name": "OpenPrinting (CUPS)",
+      "kind": "open-source-project",
+      "domains": [
+        "openprinting.github.io"
+      ],
+      "match": {
+        "snap_publisher": [
+          "openprinting"
+        ]
+      },
+      "links": {
+        "project": "https://openprinting.github.io/",
+        "advisories": "https://github.com/OpenPrinting/cups/security/advisories"
+      },
+      "support_model": "Linux Foundation project; GitHub security advisories."
+    },
+    {
+      "id": "kde",
+      "name": "KDE",
+      "kind": "open-source-project",
+      "domains": [
+        "kde.org"
+      ],
+      "match": {
+        "snap_publisher": [
+          "kde"
+        ],
+        "flatpak_app": [
+          "org.kde.*"
+        ],
+        "maintainer_domain": [
+          "kde.org"
+        ]
+      },
+      "links": {
+        "advisories": "https://kde.org/info/security/"
+      },
+      "support_model": "Community security team with published advisories."
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "kind": "software-vendor",
+      "domains": [
+        "ollama.com"
+      ],
+      "match": {
+        "path": [
+          "/usr/local/bin/ollama",
+          "/usr/local/lib/ollama*"
+        ]
+      },
+      "links": {
+        "advisories": "https://github.com/ollama/ollama/security",
+        "releases": "https://github.com/ollama/ollama/releases"
+      },
+      "support_model": "Vendor; Linux install script places a binary in /usr/local with no update channel."
+    },
+    {
+      "id": "charmbracelet",
+      "name": "Charm (charmbracelet)",
+      "kind": "open-source-project",
+      "domains": [
+        "charm.sh"
+      ],
+      "match": {
+        "snap_publisher": [
+          "charmbracelet"
+        ]
+      },
+      "links": {
+        "project": "https://github.com/charmbracelet/glow"
+      },
+      "support_model": "Open-source project; unverified Snap Store publisher account."
+    },
+    {
+      "id": "minizinc",
+      "name": "MiniZinc (Monash University)",
+      "kind": "open-source-project",
+      "domains": [
+        "minizinc.org"
+      ],
+      "match": {
+        "snap_publisher": [
+          "minizinc"
+        ]
+      },
+      "links": {
+        "project": "https://www.minizinc.org/"
+      },
+      "support_model": "Academic open-source project; no security advisory process."
+    },
+    {
+      "id": "apache-groovy",
+      "name": "Apache Groovy (ASF)",
+      "kind": "open-source-project",
+      "domains": [
+        "groovy-lang.org"
+      ],
+      "match": {
+        "snap_publisher": [
+          "apache-groovy"
+        ]
+      },
+      "links": {
+        "security": "https://groovy-lang.org/security.html",
+        "asf_security": "https://www.apache.org/security/"
+      },
+      "support_model": "Apache Software Foundation security process."
+    }
+  ]
+}

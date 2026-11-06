@@ -1,0 +1,14 @@
+# Snapshots and reports describe a specific host (software inventory, open ports,
+# key fingerprints, home-directory paths). NEVER commit them.
+output/
+state/
+snapshots/
+*.json.gz
+report.html
+report.md
+report.dot
+report.mmd
+latest*
+__pycache__/
+*.pyc
+.venv/

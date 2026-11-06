@@ -1,0 +1,2188 @@
+{
+ "_comment": "Offline lifecycle snapshot from https://endoflife.date (CC BY-SA 4.0). Regenerate with tools/update-lifecycle.py.",
+ "retrieved": "2026-11-06",
+ "lifecycle": {
+  "ubuntu": {
+   "source": "https://endoflife.date/ubuntu",
+   "cycles": [
+    {
+     "cycle": "26.10",
+     "codename": "Stonking Stingray",
+     "lts": false,
+     "releaseDate": "2026-10-15",
+     "eol": "2027-07-01",
+     "support": "2027-07-01",
+     "extendedSupport": false,
+     "latest": "26.10"
+    },
+    {
+     "cycle": "26.04",
+     "codename": "Resolute Raccoon",
+     "lts": true,
+     "releaseDate": "2026-04-23",
+     "eol": "2031-05-29",
+     "support": "2031-05-29",
+     "extendedSupport": "2036-04-23",
+     "latest": "26.04.1"
+    },
+    {
+     "cycle": "25.10",
+     "codename": "Questing Quokka",
+     "lts": false,
+     "releaseDate": "2025-10-09",
+     "eol": "2026-07-01",
+     "support": "2026-07-01",
+     "extendedSupport": false,
+     "latest": "25.10"
+    },
+    {
+     "cycle": "25.04",
+     "codename": "Plucky Puffin",
+     "lts": false,
+     "releaseDate": "2025-04-17",
+     "eol": "2026-01-17",
+     "support": "2026-01-17",
+     "extendedSupport": false,
+     "latest": "25.04"
+    },
+    {
+     "cycle": "24.10",
+     "codename": "Oracular Oriole",
+     "lts": false,
+     "releaseDate": "2024-10-10",
+     "eol": "2025-07-10",
+     "support": "2025-07-10",
+     "extendedSupport": false,
+     "latest": "24.10"
+    },
+    {
+     "cycle": "24.04",
+     "codename": "Noble Numbat",
+     "lts": true,
+     "releaseDate": "2024-04-25",
+     "eol": "2029-05-31",
+     "support": "2029-05-31",
+     "extendedSupport": "2034-04-25",
+     "latest": "24.04.5"
+    },
+    {
+     "cycle": "23.10",
+     "codename": "Mantic Minotaur",
+     "lts": false,
+     "releaseDate": "2023-10-12",
+     "eol": "2024-07-12",
+     "support": "2024-07-12",
+     "extendedSupport": false,
+     "latest": "23.10"
+    },
+    {
+     "cycle": "23.04",
+     "codename": "Lunar Lobster",
+     "lts": false,
+     "releaseDate": "2023-04-20",
+     "eol": "2024-01-20",
+     "support": "2024-01-20",
+     "extendedSupport": false,
+     "latest": "23.04"
+    },
+    {
+     "cycle": "22.10",
+     "codename": "Kinetic Kudu",
+     "lts": false,
+     "releaseDate": "2022-10-20",
+     "eol": "2023-07-20",
+     "support": "2023-07-20",
+     "extendedSupport": false,
+     "latest": "22.10"
+    },
+    {
+     "cycle": "22.04",
+     "codename": "Jammy Jellyfish",
+     "lts": true,
+     "releaseDate": "2022-04-21",
+     "eol": "2027-06-01",
+     "support": "2024-09-30",
+     "extendedSupport": "2032-04-21",
+     "latest": "22.04.5"
+    },
+    {
+     "cycle": "21.10",
+     "codename": "Impish Indri",
+     "lts": false,
+     "releaseDate": "2021-10-14",
+     "eol": "2022-07-14",
+     "support": "2022-07-14",
+     "extendedSupport": false,
+     "latest": "21.10"
+    },
+    {
+     "cycle": "21.04",
+     "codename": "Hirsute Hippo",
+     "lts": false,
+     "releaseDate": "2021-04-22",
+     "eol": "2022-01-20",
+     "support": "2022-01-20",
+     "extendedSupport": false,
+     "latest": "21.04"
+    },
+    {
+     "cycle": "20.10",
+     "codename": "Groovy Gorilla",
+     "lts": false,
+     "releaseDate": "2020-10-22",
+     "eol": "2021-07-22",
+     "support": "2021-07-22",
+     "extendedSupport": false,
+     "latest": "20.10"
+    },
+    {
+     "cycle": "20.04",
+     "codename": "Focal Fossa",
+     "lts": true,
+     "releaseDate": "2020-04-23",
+     "eol": "2025-05-31",
+     "support": "2022-10-01",
+     "extendedSupport": "2030-04-23",
+     "latest": "20.04.6"
+    },
+    {
+     "cycle": "19.10",
+     "codename": "Eoan Ermine",
+     "lts": false,
+     "releaseDate": "2019-10-17",
+     "eol": "2020-07-06",
+     "support": "2020-07-06",
+     "extendedSupport": false,
+     "latest": "19.10"
+    },
+    {
+     "cycle": "19.04",
+     "codename": "Disco Dingo",
+     "lts": false,
+     "releaseDate": "2019-04-18",
+     "eol": "2020-01-23",
+     "support": "2020-01-23",
+     "extendedSupport": false,
+     "latest": "19.04"
+    },
+    {
+     "cycle": "18.10",
+     "codename": "Cosmic Cuttlefish",
+     "lts": false,
+     "releaseDate": "2018-10-18",
+     "eol": "2019-07-18",
+     "support": "2019-07-18",
+     "extendedSupport": false,
+     "latest": "18.10"
+    },
+    {
+     "cycle": "18.04",
+     "codename": "Bionic Beaver",
+     "lts": true,
+     "releaseDate": "2018-04-26",
+     "eol": "2023-05-31",
+     "support": "2023-05-31",
+     "extendedSupport": "2028-04-26",
+     "latest": "18.04.6"
+    },
+    {
+     "cycle": "17.10",
+     "codename": "Artful Aardvark",
+     "lts": false,
+     "releaseDate": "2017-10-19",
+     "eol": "2018-07-19",
+     "support": "2018-07-19",
+     "extendedSupport": false,
+     "latest": "17.10"
+    },
+    {
+     "cycle": "17.04",
+     "codename": "Zesty Zapus",
+     "lts": false,
+     "releaseDate": "2017-04-13",
+     "eol": "2018-01-13",
+     "support": "2018-01-13",
+     "extendedSupport": false,
+     "latest": "17.04"
+    },
+    {
+     "cycle": "16.10",
+     "codename": "Yakkety Yak",
+     "lts": false,
+     "releaseDate": "2016-10-13",
+     "eol": "2017-07-20",
+     "support": "2017-07-20",
+     "extendedSupport": false,
+     "latest": "16.10"
+    },
+    {
+     "cycle": "16.04",
+     "codename": "Xenial Xerus",
+     "lts": true,
+     "releaseDate": "2016-04-21",
+     "eol": "2021-04-02",
+     "support": "2021-04-02",
+     "extendedSupport": "2026-04-02",
+     "latest": "16.04.7"
+    },
+    {
+     "cycle": "15.10",
+     "codename": "Wily Werewolf",
+     "lts": false,
+     "releaseDate": "2015-10-22",
+     "eol": "2016-07-28",
+     "support": "2016-07-28",
+     "extendedSupport": false,
+     "latest": "15.10"
+    },
+    {
+     "cycle": "15.04",
+     "codename": "Vivid Vervet",
+     "lts": false,
+     "releaseDate": "2015-04-23",
+     "eol": "2016-02-04",
+     "support": "2016-02-04",
+     "extendedSupport": false,
+     "latest": "15.04"
+    },
+    {
+     "cycle": "14.10",
+     "codename": "Utopic Unicorn",
+     "lts": false,
+     "releaseDate": "2014-10-23",
+     "eol": "2015-07-23",
+     "support": "2015-07-23",
+     "extendedSupport": false,
+     "latest": "14.10"
+    },
+    {
+     "cycle": "14.04",
+     "codename": "Trusty Tahr",
+     "lts": true,
+     "releaseDate": "2014-04-17",
+     "eol": "2019-04-02",
+     "support": "2019-04-02",
+     "extendedSupport": "2024-04-02",
+     "latest": "14.04.6"
+    },
+    {
+     "cycle": "13.10",
+     "codename": "Saucy Salamander",
+     "lts": false,
+     "releaseDate": "2013-10-17",
+     "eol": "2014-07-17",
+     "support": "2014-07-17",
+     "extendedSupport": false,
+     "latest": "13.10"
+    },
+    {
+     "cycle": "13.04",
+     "codename": "Raring Ringtail",
+     "lts": false,
+     "releaseDate": "2013-04-25",
+     "eol": "2014-01-27",
+     "support": "2014-01-27",
+     "extendedSupport": false,
+     "latest": "13.04"
+    },
+    {
+     "cycle": "12.10",
+     "codename": "Quantal Quetzal",
+     "lts": false,
+     "releaseDate": "2012-10-18",
+     "eol": "2014-05-16",
+     "support": "2014-05-16",
+     "extendedSupport": false,
+     "latest": "12.10"
+    },
+    {
+     "cycle": "12.04",
+     "codename": "Precise Pangolin",
+     "lts": true,
+     "releaseDate": "2012-04-26",
+     "eol": "2017-04-28",
+     "support": "2017-04-28",
+     "extendedSupport": "2019-04-26",
+     "latest": "12.04.5"
+    },
+    {
+     "cycle": "11.10",
+     "codename": "Oneiric Ocelot",
+     "lts": false,
+     "releaseDate": "2011-10-13",
+     "eol": "2013-05-09",
+     "support": "2013-05-09",
+     "extendedSupport": false,
+     "latest": "11.10"
+    },
+    {
+     "cycle": "11.04",
+     "codename": "Natty Narwhal",
+     "lts": false,
+     "releaseDate": "2011-04-28",
+     "eol": "2012-10-28",
+     "support": "2012-10-28",
+     "extendedSupport": false,
+     "latest": "11.04"
+    },
+    {
+     "cycle": "10.10",
+     "codename": "Maverick Meerkat",
+     "lts": false,
+     "releaseDate": "2010-10-10",
+     "eol": "2012-04-10",
+     "support": "2012-04-10",
+     "extendedSupport": false,
+     "latest": "10.10"
+    },
+    {
+     "cycle": "10.04",
+     "codename": "Lucid Lynx",
+     "lts": true,
+     "releaseDate": "2010-04-29",
+     "eol": "2013-05-09",
+     "support": "2013-05-09",
+     "extendedSupport": false,
+     "latest": "10.04.4"
+    },
+    {
+     "cycle": "9.10",
+     "codename": "Karmic Koala",
+     "lts": false,
+     "releaseDate": "2009-10-29",
+     "eol": "2011-04-30",
+     "support": "2011-04-30",
+     "extendedSupport": false,
+     "latest": "9.10"
+    },
+    {
+     "cycle": "9.04",
+     "codename": "Jaunty Jackalope",
+     "lts": false,
+     "releaseDate": "2009-04-23",
+     "eol": "2010-10-23",
+     "support": "2010-10-23",
+     "extendedSupport": false,
+     "latest": "9.04"
+    },
+    {
+     "cycle": "8.10",
+     "codename": "Intrepid Ibex",
+     "lts": false,
+     "releaseDate": "2008-10-30",
+     "eol": "2010-04-30",
+     "support": "2010-04-30",
+     "extendedSupport": false,
+     "latest": "8.10"
+    },
+    {
+     "cycle": "8.04",
+     "codename": "Hardy Heron",
+     "lts": true,
+     "releaseDate": "2008-04-24",
+     "eol": "2013-05-09",
+     "support": "2013-05-09",
+     "extendedSupport": false,
+     "latest": "8.04.4"
+    },
+    {
+     "cycle": "7.10",
+     "codename": "Gutsy Gibbon",
+     "lts": false,
+     "releaseDate": "2007-10-18",
+     "eol": "2009-04-18",
+     "support": "2009-04-18",
+     "extendedSupport": false,
+     "latest": "7.10"
+    },
+    {
+     "cycle": "7.04",
+     "codename": "Feisty Fawn",
+     "lts": false,
+     "releaseDate": "2007-04-19",
+     "eol": "2008-10-19",
+     "support": "2008-10-19",
+     "extendedSupport": false,
+     "latest": "7.04"
+    },
+    {
+     "cycle": "6.10",
+     "codename": "Edgy Eft",
+     "lts": false,
+     "releaseDate": "2006-10-26",
+     "eol": "2008-04-26",
+     "support": "2006-10-26",
+     "extendedSupport": false,
+     "latest": "6.10"
+    },
+    {
+     "cycle": "6.06",
+     "codename": "Dapper Drake",
+     "lts": true,
+     "releaseDate": "2006-06-01",
+     "eol": "2011-06-01",
+     "support": "2011-06-01",
+     "extendedSupport": false,
+     "latest": "6.06.2"
+    },
+    {
+     "cycle": "5.10",
+     "codename": "Breezy Badger",
+     "lts": false,
+     "releaseDate": "2005-10-12",
+     "eol": "2007-04-13",
+     "support": "2007-04-13",
+     "extendedSupport": false,
+     "latest": "5.10"
+    },
+    {
+     "cycle": "5.04",
+     "codename": "Hoary Hedgehog",
+     "lts": false,
+     "releaseDate": "2005-04-08",
+     "eol": "2006-10-31",
+     "support": "2006-10-31",
+     "extendedSupport": false,
+     "latest": "5.04"
+    },
+    {
+     "cycle": "4.10",
+     "codename": "Warty Warthog",
+     "lts": false,
+     "releaseDate": "2004-10-26",
+     "eol": "2006-04-30",
+     "support": "2004-10-26",
+     "extendedSupport": false,
+     "latest": "4.10"
+    }
+   ]
+  },
+  "debian": {
+   "source": "https://endoflife.date/debian",
+   "cycles": [
+    {
+     "cycle": "13",
+     "codename": "Trixie",
+     "lts": false,
+     "releaseDate": "2025-08-09",
+     "eol": "2030-06-30",
+     "support": "2028-08-09",
+     "extendedSupport": "2035-06-30",
+     "latest": "13.7"
+    },
+    {
+     "cycle": "12",
+     "codename": "Bookworm",
+     "lts": false,
+     "releaseDate": "2023-06-10",
+     "eol": "2028-06-30",
+     "support": "2026-07-11",
+     "extendedSupport": "2033-06-30",
+     "latest": "12.15"
+    },
+    {
+     "cycle": "11",
+     "codename": "Bullseye",
+     "lts": false,
+     "releaseDate": "2021-08-14",
+     "eol": "2026-08-31",
+     "support": "2024-08-14",
+     "extendedSupport": "2031-06-30",
+     "latest": "11.11"
+    },
+    {
+     "cycle": "10",
+     "codename": "Buster",
+     "lts": false,
+     "releaseDate": "2019-07-06",
+     "eol": "2024-06-30",
+     "support": "2022-09-10",
+     "extendedSupport": "2029-06-30",
+     "latest": "10.13"
+    },
+    {
+     "cycle": "9",
+     "codename": "Stretch",
+     "lts": false,
+     "releaseDate": "2017-06-17",
+     "eol": "2022-07-01",
+     "support": "2020-07-18",
+     "extendedSupport": "2027-06-30",
+     "latest": "9.13"
+    },
+    {
+     "cycle": "8",
+     "codename": "Jessie",
+     "lts": false,
+     "releaseDate": "2015-04-25",
+     "eol": "2020-06-30",
+     "support": "2018-06-17",
+     "extendedSupport": "2025-06-30",
+     "latest": "8.11"
+    },
+    {
+     "cycle": "7",
+     "codename": "Wheezy",
+     "lts": false,
+     "releaseDate": "2013-05-04",
+     "eol": "2018-05-31",
+     "support": "2016-04-25",
+     "extendedSupport": "2020-06-30",
+     "latest": "7.11"
+    },
+    {
+     "cycle": "6",
+     "codename": "Squeeze",
+     "lts": false,
+     "releaseDate": "2011-02-06",
+     "eol": "2016-02-29",
+     "support": "2014-05-31",
+     "extendedSupport": false,
+     "latest": "6.0.10"
+    },
+    {
+     "cycle": "5",
+     "codename": "Lenny",
+     "lts": false,
+     "releaseDate": "2009-02-14",
+     "eol": "2012-02-06",
+     "support": "2012-02-06",
+     "extendedSupport": false,
+     "latest": "5.0.10"
+    },
+    {
+     "cycle": "4",
+     "codename": "Etch",
+     "lts": false,
+     "releaseDate": "2007-04-08",
+     "eol": "2010-02-15",
+     "support": "2010-02-15",
+     "extendedSupport": false,
+     "latest": "4.0r9"
+    },
+    {
+     "cycle": "3.1",
+     "codename": "Sarge",
+     "lts": false,
+     "releaseDate": "2005-06-06",
+     "eol": "2008-03-31",
+     "support": "2008-03-31",
+     "extendedSupport": false,
+     "latest": "3.1r8"
+    },
+    {
+     "cycle": "3.0",
+     "codename": "Woody",
+     "lts": false,
+     "releaseDate": "2002-07-19",
+     "eol": "2006-06-30",
+     "support": "2006-06-30",
+     "extendedSupport": false,
+     "latest": "3.0r6"
+    },
+    {
+     "cycle": "2.2",
+     "codename": "Potato",
+     "lts": false,
+     "releaseDate": "2000-08-15",
+     "eol": "2003-06-30",
+     "support": "2003-06-30",
+     "extendedSupport": false,
+     "latest": "2.2r7"
+    },
+    {
+     "cycle": "2.1",
+     "codename": "Slink",
+     "lts": false,
+     "releaseDate": "1999-03-09",
+     "eol": "2000-10-30",
+     "support": "2000-09-30",
+     "extendedSupport": false,
+     "latest": "2.1r5"
+    },
+    {
+     "cycle": "2.0",
+     "codename": "Hamm",
+     "lts": false,
+     "releaseDate": "1998-07-24",
+     "eol": "1999-02-15",
+     "support": "1999-02-15",
+     "extendedSupport": false,
+     "latest": "2.0r5"
+    },
+    {
+     "cycle": "1.3",
+     "codename": "Bo",
+     "lts": false,
+     "releaseDate": "1997-07-02",
+     "eol": "1998-12-08",
+     "support": "1998-12-08",
+     "extendedSupport": false,
+     "latest": "1.3.1 r.6"
+    },
+    {
+     "cycle": "1.2",
+     "codename": "Rex",
+     "lts": false,
+     "releaseDate": "1996-12-12",
+     "eol": "1997-10-23",
+     "support": "1997-10-23",
+     "extendedSupport": false,
+     "latest": "1.2"
+    },
+    {
+     "cycle": "1.1",
+     "codename": "Buzz",
+     "lts": false,
+     "releaseDate": "1996-06-17",
+     "eol": "1996-12-12",
+     "support": "1996-12-12",
+     "extendedSupport": false,
+     "latest": "1.1"
+    }
+   ]
+  },
+  "fedora": {
+   "source": "https://endoflife.date/fedora",
+   "cycles": [
+    {
+     "cycle": "45",
+     "lts": false,
+     "releaseDate": "2026-11-03",
+     "eol": "2027-12-08",
+     "latest": "45"
+    },
+    {
+     "cycle": "44",
+     "lts": false,
+     "releaseDate": "2026-04-28",
+     "eol": "2027-06-02",
+     "latest": "44"
+    },
+    {
+     "cycle": "43",
+     "lts": false,
+     "releaseDate": "2025-10-28",
+     "eol": "2026-12-01",
+     "latest": "43"
+    },
+    {
+     "cycle": "42",
+     "codename": "Adams",
+     "lts": false,
+     "releaseDate": "2025-04-15",
+     "eol": "2026-05-27",
+     "latest": "42"
+    },
+    {
+     "cycle": "41",
+     "lts": false,
+     "releaseDate": "2024-10-29",
+     "eol": "2025-12-15",
+     "latest": "41"
+    },
+    {
+     "cycle": "40",
+     "lts": false,
+     "releaseDate": "2024-04-23",
+     "eol": "2025-05-13",
+     "latest": "40"
+    },
+    {
+     "cycle": "39",
+     "lts": false,
+     "releaseDate": "2023-11-07",
+     "eol": "2024-11-26",
+     "latest": "39"
+    },
+    {
+     "cycle": "38",
+     "lts": false,
+     "releaseDate": "2023-04-18",
+     "eol": "2024-05-21",
+     "latest": "38"
+    },
+    {
+     "cycle": "37",
+     "lts": false,
+     "releaseDate": "2022-11-15",
+     "eol": "2023-12-05",
+     "latest": "37"
+    },
+    {
+     "cycle": "36",
+     "lts": false,
+     "releaseDate": "2022-05-10",
+     "eol": "2023-05-16",
+     "latest": "36"
+    },
+    {
+     "cycle": "35",
+     "lts": false,
+     "releaseDate": "2021-11-02",
+     "eol": "2022-12-13",
+     "latest": "35"
+    },
+    {
+     "cycle": "34",
+     "lts": false,
+     "releaseDate": "2021-04-27",
+     "eol": "2022-06-07",
+     "latest": "34"
+    },
+    {
+     "cycle": "33",
+     "lts": false,
+     "releaseDate": "2020-10-27",
+     "eol": "2021-11-30",
+     "latest": "33"
+    },
+    {
+     "cycle": "32",
+     "lts": false,
+     "releaseDate": "2020-04-28",
+     "eol": "2021-05-25",
+     "latest": "32"
+    },
+    {
+     "cycle": "31",
+     "lts": false,
+     "releaseDate": "2019-10-29",
+     "eol": "2020-11-24",
+     "latest": "31"
+    },
+    {
+     "cycle": "30",
+     "lts": false,
+     "releaseDate": "2019-04-30",
+     "eol": "2020-05-26",
+     "latest": "30"
+    },
+    {
+     "cycle": "29",
+     "lts": false,
+     "releaseDate": "2018-10-30",
+     "eol": "2019-11-26",
+     "latest": "29"
+    },
+    {
+     "cycle": "28",
+     "lts": false,
+     "releaseDate": "2018-05-01",
+     "eol": "2019-05-28",
+     "latest": "28"
+    },
+    {
+     "cycle": "27",
+     "lts": false,
+     "releaseDate": "2017-11-14",
+     "eol": "2018-11-30",
+     "latest": "27"
+    },
+    {
+     "cycle": "26",
+     "lts": false,
+     "releaseDate": "2017-07-11",
+     "eol": "2018-05-29",
+     "latest": "26"
+    },
+    {
+     "cycle": "25",
+     "lts": false,
+     "releaseDate": "2016-11-22",
+     "eol": "2017-12-12",
+     "latest": "25"
+    },
+    {
+     "cycle": "24",
+     "lts": false,
+     "releaseDate": "2016-06-21",
+     "eol": "2017-08-08",
+     "latest": "24"
+    },
+    {
+     "cycle": "23",
+     "lts": false,
+     "releaseDate": "2015-11-03",
+     "eol": "2016-12-20",
+     "latest": "23"
+    },
+    {
+     "cycle": "22",
+     "lts": false,
+     "releaseDate": "2015-05-26",
+     "eol": "2016-07-19",
+     "latest": "22"
+    },
+    {
+     "cycle": "21",
+     "lts": false,
+     "releaseDate": "2014-12-09",
+     "eol": "2015-12-01",
+     "latest": "21"
+    },
+    {
+     "cycle": "20",
+     "codename": "Heisenbug",
+     "lts": false,
+     "releaseDate": "2013-12-17",
+     "eol": "2015-06-23",
+     "latest": "20"
+    },
+    {
+     "cycle": "19",
+     "codename": "Schr\u00f6dinger's Cat",
+     "lts": false,
+     "releaseDate": "2013-07-02",
+     "eol": "2015-01-06",
+     "latest": "19"
+    },
+    {
+     "cycle": "18",
+     "codename": "Spherical Cow",
+     "lts": false,
+     "releaseDate": "2013-01-15",
+     "eol": "2014-01-14",
+     "latest": "18"
+    },
+    {
+     "cycle": "17",
+     "codename": "Beefy Miracle",
+     "lts": false,
+     "releaseDate": "2012-05-29",
+     "eol": "2013-07-30",
+     "latest": "17"
+    },
+    {
+     "cycle": "16",
+     "codename": "Verne",
+     "lts": false,
+     "releaseDate": "2011-11-08",
+     "eol": "2013-02-12",
+     "latest": "16"
+    },
+    {
+     "cycle": "15",
+     "codename": "Lovelock",
+     "lts": false,
+     "releaseDate": "2011-05-24",
+     "eol": "2012-06-26",
+     "latest": "15"
+    },
+    {
+     "cycle": "14",
+     "codename": "Laughlin",
+     "lts": false,
+     "releaseDate": "2010-11-02",
+     "eol": "2011-12-09",
+     "latest": "14"
+    },
+    {
+     "cycle": "13",
+     "codename": "Goddard",
+     "lts": false,
+     "releaseDate": "2010-05-25",
+     "eol": "2011-06-24",
+     "latest": "13"
+    },
+    {
+     "cycle": "12",
+     "codename": "Constantine",
+     "lts": false,
+     "releaseDate": "2009-11-17",
+     "eol": "2010-12-02",
+     "latest": "12"
+    },
+    {
+     "cycle": "11",
+     "codename": "Leonidas",
+     "lts": false,
+     "releaseDate": "2009-06-09",
+     "eol": "2010-06-25",
+     "latest": "11"
+    },
+    {
+     "cycle": "10",
+     "codename": "Cambridge",
+     "lts": false,
+     "releaseDate": "2008-11-25",
+     "eol": "2009-12-17",
+     "latest": "10"
+    },
+    {
+     "cycle": "9",
+     "codename": "Sulphur",
+     "lts": false,
+     "releaseDate": "2008-05-13",
+     "eol": "2009-07-10",
+     "latest": "9"
+    },
+    {
+     "cycle": "8",
+     "codename": "Werewolf",
+     "lts": false,
+     "releaseDate": "2007-11-08",
+     "eol": "2009-01-07",
+     "latest": "8"
+    },
+    {
+     "cycle": "7",
+     "codename": "Moonshine",
+     "lts": false,
+     "releaseDate": "2007-05-31",
+     "eol": "2008-06-13",
+     "latest": "7"
+    },
+    {
+     "cycle": "6",
+     "codename": "Zod",
+     "lts": false,
+     "releaseDate": "2006-10-24",
+     "eol": "2007-12-07",
+     "latest": "6"
+    },
+    {
+     "cycle": "5",
+     "codename": "Bordeaux",
+     "lts": false,
+     "releaseDate": "2006-03-20",
+     "eol": "2007-07-02",
+     "latest": "5"
+    },
+    {
+     "cycle": "4",
+     "codename": "Stentz",
+     "lts": false,
+     "releaseDate": "2005-06-13",
+     "eol": "2006-08-07",
+     "latest": "4"
+    },
+    {
+     "cycle": "3",
+     "codename": "Heidelberg",
+     "lts": false,
+     "releaseDate": "2004-11-08",
+     "eol": "2006-01-16",
+     "latest": "3"
+    },
+    {
+     "cycle": "2",
+     "codename": "Tettnang",
+     "lts": false,
+     "releaseDate": "2004-05-18",
+     "eol": "2005-04-11",
+     "latest": "2"
+    },
+    {
+     "cycle": "1",
+     "codename": "Yarrow",
+     "lts": false,
+     "releaseDate": "2003-11-05",
+     "eol": "2004-09-20",
+     "latest": "1"
+    }
+   ]
+  },
+  "rhel": {
+   "source": "https://endoflife.date/rhel",
+   "cycles": [
+    {
+     "cycle": "10",
+     "lts": "2035-05-31",
+     "releaseDate": "2025-05-20",
+     "eol": "2035-05-31",
+     "support": "2030-05-31",
+     "extendedSupport": "2039-05-31",
+     "latest": "10.2"
+    },
+    {
+     "cycle": "9",
+     "lts": "2032-05-31",
+     "releaseDate": "2022-05-18",
+     "eol": "2032-05-31",
+     "support": "2027-05-31",
+     "extendedSupport": "2036-05-31",
+     "latest": "9.8"
+    },
+    {
+     "cycle": "8",
+     "lts": "2029-05-31",
+     "releaseDate": "2019-05-07",
+     "eol": "2029-05-31",
+     "support": "2024-05-31",
+     "extendedSupport": "2033-05-31",
+     "latest": "8.10"
+    },
+    {
+     "cycle": "7",
+     "lts": "2024-06-30",
+     "releaseDate": "2014-06-10",
+     "eol": "2024-06-30",
+     "support": "2019-08-06",
+     "extendedSupport": "2029-05-31",
+     "latest": "7.9"
+    },
+    {
+     "cycle": "6",
+     "lts": "2020-11-30",
+     "releaseDate": "2010-11-10",
+     "eol": "2020-11-30",
+     "support": "2016-05-10",
+     "extendedSupport": "2024-06-30",
+     "latest": "6.10"
+    },
+    {
+     "cycle": "5",
+     "lts": "2017-03-31",
+     "releaseDate": "2007-03-15",
+     "eol": "2017-03-31",
+     "support": "2013-01-08",
+     "extendedSupport": "2020-11-30",
+     "latest": "5.11"
+    },
+    {
+     "cycle": "4",
+     "lts": false,
+     "releaseDate": "2005-02-15",
+     "eol": "2012-02-29",
+     "support": "2009-03-31",
+     "extendedSupport": "2017-03-31",
+     "latest": "4.9"
+    }
+   ]
+  },
+  "rocky-linux": {
+   "source": "https://endoflife.date/rocky-linux",
+   "cycles": [
+    {
+     "cycle": "10",
+     "lts": false,
+     "releaseDate": "2025-06-11",
+     "eol": "2035-05-31",
+     "support": "2030-05-31",
+     "latest": "10.2"
+    },
+    {
+     "cycle": "9",
+     "lts": false,
+     "releaseDate": "2022-07-14",
+     "eol": "2032-05-31",
+     "support": "2027-05-31",
+     "latest": "9.8"
+    },
+    {
+     "cycle": "8",
+     "lts": false,
+     "releaseDate": "2021-05-01",
+     "eol": "2029-05-31",
+     "support": "2024-05-31",
+     "latest": "8.10"
+    }
+   ]
+  },
+  "almalinux": {
+   "source": "https://endoflife.date/almalinux",
+   "cycles": [
+    {
+     "cycle": "10",
+     "lts": false,
+     "releaseDate": "2025-05-27",
+     "eol": "2035-05-31",
+     "support": "2030-05-31",
+     "latest": "10.2"
+    },
+    {
+     "cycle": "9",
+     "lts": false,
+     "releaseDate": "2022-05-26",
+     "eol": "2032-05-31",
+     "support": "2027-05-31",
+     "latest": "9.8"
+    },
+    {
+     "cycle": "8",
+     "lts": false,
+     "releaseDate": "2021-03-30",
+     "eol": "2029-05-31",
+     "support": "2024-05-31",
+     "latest": "8.10"
+    }
+   ]
+  },
+  "linuxmint": {
+   "source": "https://endoflife.date/linuxmint",
+   "cycles": [
+    {
+     "cycle": "22.3",
+     "codename": "Zena",
+     "lts": true,
+     "releaseDate": "2026-01-11",
+     "eol": "2029-04-30"
+    },
+    {
+     "cycle": "lmde7",
+     "codename": "Gigi",
+     "lts": false,
+     "releaseDate": "2025-10-14",
+     "eol": false
+    },
+    {
+     "cycle": "22.2",
+     "codename": "Zara",
+     "lts": true,
+     "releaseDate": "2025-09-04",
+     "eol": "2029-04-30"
+    },
+    {
+     "cycle": "22.1",
+     "codename": "Xia",
+     "lts": true,
+     "releaseDate": "2025-01-16",
+     "eol": "2029-04-30"
+    },
+    {
+     "cycle": "22",
+     "codename": "Wilma",
+     "lts": true,
+     "releaseDate": "2024-07-25",
+     "eol": "2029-04-30"
+    },
+    {
+     "cycle": "21.3",
+     "codename": "Virginia",
+     "lts": true,
+     "releaseDate": "2024-01-12",
+     "eol": "2027-04-30"
+    },
+    {
+     "cycle": "lmde6",
+     "codename": "Faye",
+     "lts": false,
+     "releaseDate": "2023-09-27",
+     "eol": "2026-01-01"
+    },
+    {
+     "cycle": "21.2",
+     "codename": "Victoria",
+     "lts": true,
+     "releaseDate": "2023-07-16",
+     "eol": "2027-04-30"
+    },
+    {
+     "cycle": "21.1",
+     "codename": "Vera",
+     "lts": true,
+     "releaseDate": "2022-12-20",
+     "eol": "2027-04-30"
+    },
+    {
+     "cycle": "21",
+     "codename": "Vanessa",
+     "lts": true,
+     "releaseDate": "2022-07-31",
+     "eol": "2027-04-30"
+    },
+    {
+     "cycle": "lmde5",
+     "codename": "Elsie",
+     "lts": false,
+     "releaseDate": "2022-03-20",
+     "eol": "2024-07-01"
+    },
+    {
+     "cycle": "20.3",
+     "codename": "Una",
+     "lts": true,
+     "releaseDate": "2022-01-07",
+     "eol": "2025-04-30"
+    },
+    {
+     "cycle": "20.2",
+     "codename": "Uma",
+     "lts": true,
+     "releaseDate": "2021-07-08",
+     "eol": "2025-04-30"
+    },
+    {
+     "cycle": "20.1",
+     "codename": "Ulyssa",
+     "lts": true,
+     "releaseDate": "2021-01-08",
+     "eol": "2025-04-30"
+    },
+    {
+     "cycle": "20",
+     "codename": "Ulyana",
+     "lts": true,
+     "releaseDate": "2020-06-27",
+     "eol": "2025-04-30"
+    },
+    {
+     "cycle": "lmde4",
+     "codename": "Debbie",
+     "lts": false,
+     "releaseDate": "2020-03-20",
+     "eol": "2022-08-01"
+    },
+    {
+     "cycle": "19.3",
+     "codename": "Tricia",
+     "lts": true,
+     "releaseDate": "2019-12-18",
+     "eol": "2023-04-01"
+    },
+    {
+     "cycle": "19.2",
+     "codename": "Tina",
+     "lts": true,
+     "releaseDate": "2019-08-02",
+     "eol": "2023-04-01"
+    },
+    {
+     "cycle": "19.1",
+     "codename": "Tessa",
+     "lts": true,
+     "releaseDate": "2018-12-19",
+     "eol": "2023-04-01"
+    },
+    {
+     "cycle": "19",
+     "codename": "Tara",
+     "lts": true,
+     "releaseDate": "2018-06-29",
+     "eol": "2023-04-01"
+    },
+    {
+     "cycle": "18.3",
+     "codename": "Sylvia",
+     "lts": true,
+     "releaseDate": "2017-11-27",
+     "eol": "2021-05-03"
+    },
+    {
+     "cycle": "18.1",
+     "codename": "Serena",
+     "lts": false,
+     "releaseDate": "2017-01-27",
+     "eol": "2021-04-01"
+    }
+   ]
+  },
+  "alpine-linux": {
+   "source": "https://endoflife.date/alpine-linux",
+   "cycles": [
+    {
+     "cycle": "3.24",
+     "lts": false,
+     "releaseDate": "2026-06-09",
+     "eol": "2028-06-01",
+     "latest": "3.24.3"
+    },
+    {
+     "cycle": "3.23",
+     "lts": false,
+     "releaseDate": "2025-12-04",
+     "eol": "2027-11-01",
+     "latest": "3.23.7"
+    },
+    {
+     "cycle": "3.22",
+     "lts": false,
+     "releaseDate": "2025-05-30",
+     "eol": "2027-05-01",
+     "latest": "3.22.7"
+    },
+    {
+     "cycle": "3.21",
+     "lts": false,
+     "releaseDate": "2024-12-05",
+     "eol": "2026-11-01",
+     "latest": "3.21.9"
+    },
+    {
+     "cycle": "3.20",
+     "lts": false,
+     "releaseDate": "2024-05-22",
+     "eol": "2026-04-01",
+     "latest": "3.20.10"
+    },
+    {
+     "cycle": "3.19",
+     "lts": false,
+     "releaseDate": "2023-12-07",
+     "eol": "2025-11-01",
+     "latest": "3.19.9"
+    },
+    {
+     "cycle": "3.18",
+     "lts": false,
+     "releaseDate": "2023-05-09",
+     "eol": "2025-05-09",
+     "latest": "3.18.12"
+    },
+    {
+     "cycle": "3.17",
+     "lts": false,
+     "releaseDate": "2022-11-22",
+     "eol": "2024-11-22",
+     "latest": "3.17.10"
+    },
+    {
+     "cycle": "3.16",
+     "lts": false,
+     "releaseDate": "2022-05-23",
+     "eol": "2024-05-23",
+     "latest": "3.16.9"
+    },
+    {
+     "cycle": "3.15",
+     "lts": false,
+     "releaseDate": "2021-11-24",
+     "eol": "2023-11-01",
+     "latest": "3.15.11"
+    },
+    {
+     "cycle": "3.14",
+     "lts": false,
+     "releaseDate": "2021-06-15",
+     "eol": "2023-05-01",
+     "latest": "3.14.10"
+    },
+    {
+     "cycle": "3.13",
+     "lts": false,
+     "releaseDate": "2021-01-14",
+     "eol": "2022-11-01",
+     "latest": "3.13.12"
+    },
+    {
+     "cycle": "3.12",
+     "lts": false,
+     "releaseDate": "2020-05-29",
+     "eol": "2022-05-01",
+     "latest": "3.12.12"
+    },
+    {
+     "cycle": "3.11",
+     "lts": false,
+     "releaseDate": "2019-12-19",
+     "eol": "2021-11-01",
+     "latest": "3.11.13"
+    },
+    {
+     "cycle": "3.10",
+     "lts": false,
+     "releaseDate": "2019-06-19",
+     "eol": "2021-05-01",
+     "latest": "3.10.9"
+    },
+    {
+     "cycle": "3.9",
+     "lts": false,
+     "releaseDate": "2019-01-29",
+     "eol": "2020-11-01",
+     "latest": "3.9.6"
+    },
+    {
+     "cycle": "3.8",
+     "lts": false,
+     "releaseDate": "2018-06-26",
+     "eol": "2020-05-01",
+     "latest": "3.8.5"
+    },
+    {
+     "cycle": "3.7",
+     "lts": false,
+     "releaseDate": "2017-11-30",
+     "eol": "2019-11-01",
+     "latest": "3.7.3"
+    },
+    {
+     "cycle": "3.6",
+     "lts": false,
+     "releaseDate": "2017-05-24",
+     "eol": "2019-05-01",
+     "latest": "3.6.5"
+    },
+    {
+     "cycle": "3.5",
+     "lts": false,
+     "releaseDate": "2016-12-22",
+     "eol": "2018-11-01",
+     "latest": "3.5.3"
+    },
+    {
+     "cycle": "3.4",
+     "lts": false,
+     "releaseDate": "2016-05-31",
+     "eol": "2018-05-01",
+     "latest": "3.4.6"
+    },
+    {
+     "cycle": "3.3",
+     "lts": false,
+     "releaseDate": "2015-12-19",
+     "eol": "2017-11-01",
+     "latest": "3.3.3"
+    },
+    {
+     "cycle": "3.2",
+     "lts": false,
+     "releaseDate": "2015-05-26",
+     "eol": "2017-05-01",
+     "latest": "3.2.3"
+    },
+    {
+     "cycle": "3.1",
+     "lts": false,
+     "releaseDate": "2014-12-10",
+     "eol": "2016-11-01",
+     "latest": "3.1.4"
+    },
+    {
+     "cycle": "3.0",
+     "lts": false,
+     "releaseDate": "2014-06-04",
+     "eol": "2016-05-01",
+     "latest": "3.0.6"
+    },
+    {
+     "cycle": "2.7",
+     "lts": false,
+     "releaseDate": "2011-01-06",
+     "eol": "2015-11-01",
+     "latest": "2.7.9"
+    },
+    {
+     "cycle": "2.6",
+     "lts": false,
+     "releaseDate": "2010-12-15",
+     "eol": "2015-05-01",
+     "latest": "2.6.8"
+    },
+    {
+     "cycle": "2.5",
+     "lts": false,
+     "releaseDate": "2010-08-12",
+     "eol": "2014-11-01",
+     "latest": "2.5.4"
+    },
+    {
+     "cycle": "2.4",
+     "lts": false,
+     "releaseDate": "2010-07-07",
+     "eol": "2014-05-01",
+     "latest": "2.4.11"
+    },
+    {
+     "cycle": "2.3",
+     "lts": false,
+     "releaseDate": "2010-05-19",
+     "eol": "2013-11-01",
+     "latest": "2.3.6"
+    },
+    {
+     "cycle": "2.2",
+     "lts": false,
+     "releaseDate": "2010-05-04",
+     "eol": "2013-05-01",
+     "latest": "2.2.5"
+    },
+    {
+     "cycle": "2.1",
+     "lts": false,
+     "releaseDate": "2009-12-30",
+     "eol": "2012-11-01",
+     "latest": "2.1.6"
+    }
+   ]
+  },
+  "opensuse": {
+   "source": "https://endoflife.date/opensuse",
+   "cycles": [
+    {
+     "cycle": "16.0",
+     "lts": false,
+     "releaseDate": "2025-10-01",
+     "eol": "2027-10-31"
+    },
+    {
+     "cycle": "15.6",
+     "lts": false,
+     "releaseDate": "2024-06-12",
+     "eol": "2026-04-30"
+    },
+    {
+     "cycle": "15.5",
+     "lts": false,
+     "releaseDate": "2023-06-07",
+     "eol": "2024-12-31"
+    },
+    {
+     "cycle": "15.4",
+     "lts": false,
+     "releaseDate": "2022-06-09",
+     "eol": "2023-12-07"
+    },
+    {
+     "cycle": "15.3",
+     "lts": false,
+     "releaseDate": "2021-06-02",
+     "eol": "2022-12-31"
+    },
+    {
+     "cycle": "15.2",
+     "lts": false,
+     "releaseDate": "2020-07-02",
+     "eol": "2022-01-04"
+    },
+    {
+     "cycle": "15.1",
+     "lts": false,
+     "releaseDate": "2019-05-22",
+     "eol": "2021-02-02"
+    },
+    {
+     "cycle": "15.0",
+     "lts": false,
+     "releaseDate": "2018-05-25",
+     "eol": "2019-12-03"
+    },
+    {
+     "cycle": "42.3",
+     "lts": false,
+     "releaseDate": "2017-07-26",
+     "eol": "2019-07-01"
+    },
+    {
+     "cycle": "42.2",
+     "lts": false,
+     "releaseDate": "2016-11-16",
+     "eol": "2018-01-26"
+    },
+    {
+     "cycle": "42.1",
+     "lts": false,
+     "releaseDate": "2015-11-04",
+     "eol": "2017-05-17"
+    },
+    {
+     "cycle": "13.2",
+     "lts": false,
+     "releaseDate": "2014-11-04",
+     "eol": "2017-01-17"
+    },
+    {
+     "cycle": "13.1",
+     "lts": false,
+     "releaseDate": "2014-01-08",
+     "eol": "2016-02-03"
+    },
+    {
+     "cycle": "12.3",
+     "lts": false,
+     "releaseDate": "2013-03-13",
+     "eol": "2015-01-29"
+    },
+    {
+     "cycle": "12.2",
+     "lts": false,
+     "releaseDate": "2012-09-05",
+     "eol": "2014-01-15"
+    },
+    {
+     "cycle": "12.1",
+     "lts": false,
+     "releaseDate": "2011-11-16",
+     "eol": "2013-05-15"
+    },
+    {
+     "cycle": "11.4",
+     "lts": false,
+     "releaseDate": "2011-03-10",
+     "eol": "2012-11-05"
+    },
+    {
+     "cycle": "11.3",
+     "lts": false,
+     "releaseDate": "2010-07-15",
+     "eol": "2012-01-20"
+    },
+    {
+     "cycle": "11.2",
+     "lts": false,
+     "releaseDate": "2009-11-12",
+     "eol": "2011-05-12"
+    },
+    {
+     "cycle": "11.1",
+     "lts": false,
+     "releaseDate": "2008-12-18",
+     "eol": "2011-01-14"
+    },
+    {
+     "cycle": "11.0",
+     "lts": false,
+     "releaseDate": "2008-06-19",
+     "eol": "2010-07-26"
+    }
+   ]
+  },
+  "centos": {
+   "source": "https://endoflife.date/centos",
+   "cycles": [
+    {
+     "cycle": "8",
+     "lts": false,
+     "releaseDate": "2019-09-24",
+     "eol": "2021-12-31",
+     "support": "2021-12-31",
+     "latest": "8 (2111)"
+    },
+    {
+     "cycle": "7",
+     "lts": false,
+     "releaseDate": "2014-07-07",
+     "eol": "2024-06-30",
+     "support": "2020-08-06",
+     "latest": "7 (2009)"
+    },
+    {
+     "cycle": "6",
+     "lts": false,
+     "releaseDate": "2011-07-10",
+     "eol": "2020-11-30",
+     "support": "2017-05-10",
+     "latest": "6.10"
+    },
+    {
+     "cycle": "5",
+     "lts": false,
+     "releaseDate": "2007-04-12",
+     "eol": "2017-03-31",
+     "support": "2014-01-31",
+     "latest": "5.11"
+    }
+   ]
+  },
+  "nodejs": {
+   "source": "https://endoflife.date/nodejs",
+   "cycles": [
+    {
+     "cycle": "26",
+     "lts": "2026-10-28",
+     "releaseDate": "2026-05-05",
+     "eol": "2029-04-30",
+     "support": "2027-10-27",
+     "extendedSupport": false,
+     "latest": "26.13.0"
+    },
+    {
+     "cycle": "25",
+     "lts": false,
+     "releaseDate": "2025-10-15",
+     "eol": "2026-06-01",
+     "support": "2026-04-01",
+     "extendedSupport": false,
+     "latest": "25.9.0"
+    },
+    {
+     "cycle": "24",
+     "lts": "2025-10-28",
+     "releaseDate": "2025-05-06",
+     "eol": "2028-04-30",
+     "support": "2026-10-20",
+     "extendedSupport": false,
+     "latest": "24.22.2"
+    },
+    {
+     "cycle": "23",
+     "lts": false,
+     "releaseDate": "2024-10-16",
+     "eol": "2025-06-01",
+     "support": "2025-04-01",
+     "extendedSupport": false,
+     "latest": "23.11.1"
+    },
+    {
+     "cycle": "22",
+     "lts": "2024-10-29",
+     "releaseDate": "2024-04-24",
+     "eol": "2027-04-30",
+     "support": "2025-10-21",
+     "extendedSupport": true,
+     "latest": "22.23.4"
+    },
+    {
+     "cycle": "21",
+     "lts": false,
+     "releaseDate": "2023-10-17",
+     "eol": "2024-06-01",
+     "support": "2024-04-01",
+     "extendedSupport": false,
+     "latest": "21.7.3"
+    },
+    {
+     "cycle": "20",
+     "lts": "2023-10-24",
+     "releaseDate": "2023-04-18",
+     "eol": "2026-04-30",
+     "support": "2024-10-22",
+     "extendedSupport": true,
+     "latest": "20.20.2"
+    },
+    {
+     "cycle": "19",
+     "lts": false,
+     "releaseDate": "2022-10-18",
+     "eol": "2023-06-01",
+     "support": "2023-04-01",
+     "extendedSupport": false,
+     "latest": "19.9.0"
+    },
+    {
+     "cycle": "18",
+     "lts": "2022-10-25",
+     "releaseDate": "2022-04-19",
+     "eol": "2025-04-30",
+     "support": "2023-10-18",
+     "extendedSupport": true,
+     "latest": "18.20.8"
+    },
+    {
+     "cycle": "17",
+     "lts": false,
+     "releaseDate": "2021-10-19",
+     "eol": "2022-06-01",
+     "support": "2022-04-01",
+     "extendedSupport": false,
+     "latest": "17.9.1"
+    },
+    {
+     "cycle": "16",
+     "lts": "2021-10-26",
+     "releaseDate": "2021-04-20",
+     "eol": "2023-09-11",
+     "support": "2022-10-18",
+     "extendedSupport": true,
+     "latest": "16.20.2"
+    },
+    {
+     "cycle": "15",
+     "lts": false,
+     "releaseDate": "2020-10-20",
+     "eol": "2021-06-01",
+     "support": "2021-04-01",
+     "extendedSupport": false,
+     "latest": "15.14.0"
+    },
+    {
+     "cycle": "14",
+     "lts": "2020-10-27",
+     "releaseDate": "2020-04-21",
+     "eol": "2023-04-30",
+     "support": "2021-10-19",
+     "extendedSupport": true,
+     "latest": "14.21.3"
+    },
+    {
+     "cycle": "13",
+     "lts": false,
+     "releaseDate": "2019-10-22",
+     "eol": "2020-06-01",
+     "support": "2020-04-01",
+     "extendedSupport": false,
+     "latest": "13.14.0"
+    },
+    {
+     "cycle": "12",
+     "lts": "2019-10-21",
+     "releaseDate": "2019-04-23",
+     "eol": "2022-04-30",
+     "support": "2020-10-20",
+     "extendedSupport": true,
+     "latest": "12.22.12"
+    },
+    {
+     "cycle": "11",
+     "lts": false,
+     "releaseDate": "2018-10-23",
+     "eol": "2019-06-30",
+     "support": "2019-04-01",
+     "extendedSupport": false,
+     "latest": "11.15.0"
+    },
+    {
+     "cycle": "10",
+     "lts": "2018-10-30",
+     "releaseDate": "2018-04-24",
+     "eol": "2021-04-30",
+     "support": "2020-05-19",
+     "extendedSupport": false,
+     "latest": "10.24.1"
+    },
+    {
+     "cycle": "9",
+     "lts": false,
+     "releaseDate": "2017-10-31",
+     "eol": "2018-06-30",
+     "support": "2018-06-30",
+     "extendedSupport": false,
+     "latest": "9.11.2"
+    },
+    {
+     "cycle": "8",
+     "lts": "2017-10-31",
+     "releaseDate": "2017-05-30",
+     "eol": "2019-12-31",
+     "support": "2019-01-01",
+     "extendedSupport": false,
+     "latest": "8.17.0"
+    },
+    {
+     "cycle": "7",
+     "lts": false,
+     "releaseDate": "2016-10-25",
+     "eol": "2017-06-30",
+     "support": "2017-06-30",
+     "extendedSupport": false,
+     "latest": "7.10.1"
+    },
+    {
+     "cycle": "6",
+     "lts": "2016-10-18",
+     "releaseDate": "2016-04-26",
+     "eol": "2019-04-30",
+     "support": "2018-04-30",
+     "extendedSupport": false,
+     "latest": "6.17.1"
+    },
+    {
+     "cycle": "5",
+     "lts": false,
+     "releaseDate": "2015-10-30",
+     "eol": "2016-06-30",
+     "support": "2016-06-30",
+     "extendedSupport": false,
+     "latest": "5.12.0"
+    },
+    {
+     "cycle": "4",
+     "lts": "2015-10-01",
+     "releaseDate": "2015-09-09",
+     "eol": "2018-04-30",
+     "support": "2017-04-01",
+     "extendedSupport": false,
+     "latest": "4.9.1"
+    },
+    {
+     "cycle": "3",
+     "lts": false,
+     "releaseDate": "2015-08-04",
+     "eol": true,
+     "support": false,
+     "extendedSupport": false,
+     "latest": "3.3.1"
+    },
+    {
+     "cycle": "2",
+     "lts": false,
+     "releaseDate": "2015-05-04",
+     "eol": true,
+     "support": false,
+     "extendedSupport": false,
+     "latest": "2.5.0"
+    },
+    {
+     "cycle": "1",
+     "lts": false,
+     "releaseDate": "2015-01-20",
+     "eol": true,
+     "support": false,
+     "extendedSupport": false,
+     "latest": "1.8.4"
+    }
+   ]
+  },
+  "python": {
+   "source": "https://endoflife.date/python",
+   "cycles": [
+    {
+     "cycle": "3.15",
+     "lts": false,
+     "releaseDate": "2026-10-09",
+     "eol": "2031-10-31",
+     "support": "2028-10-09",
+     "latest": "3.15.2"
+    },
+    {
+     "cycle": "3.14",
+     "lts": false,
+     "releaseDate": "2025-10-07",
+     "eol": "2030-10-31",
+     "support": "2027-10-01",
+     "latest": "3.14.10"
+    },
+    {
+     "cycle": "3.13",
+     "lts": false,
+     "releaseDate": "2024-10-07",
+     "eol": "2029-10-31",
+     "support": "2026-10-01",
+     "latest": "3.13.18"
+    },
+    {
+     "cycle": "3.12",
+     "lts": false,
+     "releaseDate": "2023-10-02",
+     "eol": "2028-10-31",
+     "support": "2025-04-02",
+     "latest": "3.12.16"
+    },
+    {
+     "cycle": "3.11",
+     "lts": false,
+     "releaseDate": "2022-10-24",
+     "eol": "2027-10-31",
+     "support": "2024-04-01",
+     "latest": "3.11.18"
+    },
+    {
+     "cycle": "3.10",
+     "lts": false,
+     "releaseDate": "2021-10-04",
+     "eol": "2026-10-01",
+     "support": "2023-04-05",
+     "latest": "3.10.22"
+    },
+    {
+     "cycle": "3.9",
+     "lts": false,
+     "releaseDate": "2020-10-05",
+     "eol": "2025-10-31",
+     "support": "2022-05-17",
+     "latest": "3.9.25"
+    },
+    {
+     "cycle": "3.8",
+     "lts": false,
+     "releaseDate": "2019-10-14",
+     "eol": "2024-10-07",
+     "support": "2021-05-03",
+     "latest": "3.8.20"
+    },
+    {
+     "cycle": "3.7",
+     "lts": false,
+     "releaseDate": "2018-06-27",
+     "eol": "2023-06-27",
+     "support": "2020-06-27",
+     "latest": "3.7.17"
+    },
+    {
+     "cycle": "3.6",
+     "lts": false,
+     "releaseDate": "2016-12-23",
+     "eol": "2021-12-23",
+     "support": "2018-12-24",
+     "latest": "3.6.15"
+    },
+    {
+     "cycle": "3.5",
+     "lts": false,
+     "releaseDate": "2015-09-13",
+     "eol": "2020-09-30",
+     "support": false,
+     "latest": "3.5.10"
+    },
+    {
+     "cycle": "3.4",
+     "lts": false,
+     "releaseDate": "2014-03-16",
+     "eol": "2019-03-18",
+     "support": false,
+     "latest": "3.4.10"
+    },
+    {
+     "cycle": "3.3",
+     "lts": false,
+     "releaseDate": "2012-09-29",
+     "eol": "2017-09-29",
+     "support": false,
+     "latest": "3.3.7"
+    },
+    {
+     "cycle": "3.2",
+     "lts": false,
+     "releaseDate": "2011-02-20",
+     "eol": "2016-02-20",
+     "support": false,
+     "latest": "3.2.6"
+    },
+    {
+     "cycle": "2.7",
+     "lts": false,
+     "releaseDate": "2010-07-03",
+     "eol": "2020-01-01",
+     "support": false,
+     "latest": "2.7.18"
+    },
+    {
+     "cycle": "3.1",
+     "lts": false,
+     "releaseDate": "2009-06-27",
+     "eol": "2012-04-09",
+     "support": false,
+     "latest": "3.1.5"
+    },
+    {
+     "cycle": "3.0",
+     "lts": false,
+     "releaseDate": "2008-12-03",
+     "eol": "2009-06-27",
+     "support": false,
+     "latest": "3.0.1"
+    },
+    {
+     "cycle": "2.6",
+     "lts": false,
+     "releaseDate": "2008-10-01",
+     "eol": "2013-10-29",
+     "support": false,
+     "latest": "2.6.9"
+    }
+   ]
+  },
+  "go": {
+   "source": "https://endoflife.date/go",
+   "cycles": [
+    {
+     "cycle": "1.27",
+     "lts": false,
+     "releaseDate": "2026-08-19",
+     "eol": false,
+     "latest": "1.27.3"
+    },
+    {
+     "cycle": "1.26",
+     "lts": false,
+     "releaseDate": "2026-02-10",
+     "eol": false,
+     "latest": "1.26.10"
+    },
+    {
+     "cycle": "1.25",
+     "lts": false,
+     "releaseDate": "2025-08-12",
+     "eol": "2026-08-19",
+     "latest": "1.25.14"
+    },
+    {
+     "cycle": "1.24",
+     "lts": false,
+     "releaseDate": "2025-02-11",
+     "eol": "2026-02-10",
+     "latest": "1.24.13"
+    },
+    {
+     "cycle": "1.23",
+     "lts": false,
+     "releaseDate": "2024-08-13",
+     "eol": "2025-08-12",
+     "latest": "1.23.12"
+    },
+    {
+     "cycle": "1.22",
+     "lts": false,
+     "releaseDate": "2024-02-06",
+     "eol": "2025-02-11",
+     "latest": "1.22.12"
+    },
+    {
+     "cycle": "1.21",
+     "lts": false,
+     "releaseDate": "2023-08-08",
+     "eol": "2024-08-13",
+     "latest": "1.21.13"
+    },
+    {
+     "cycle": "1.20",
+     "lts": false,
+     "releaseDate": "2023-02-01",
+     "eol": "2024-02-06",
+     "latest": "1.20.14"
+    },
+    {
+     "cycle": "1.19",
+     "lts": false,
+     "releaseDate": "2022-08-02",
+     "eol": "2023-09-06",
+     "latest": "1.19.13"
+    },
+    {
+     "cycle": "1.18",
+     "lts": false,
+     "releaseDate": "2022-03-15",
+     "eol": "2023-02-01",
+     "latest": "1.18.10"
+    },
+    {
+     "cycle": "1.17",
+     "lts": false,
+     "releaseDate": "2021-08-16",
+     "eol": "2022-08-02",
+     "latest": "1.17.13"
+    },
+    {
+     "cycle": "1.16",
+     "lts": false,
+     "releaseDate": "2021-02-16",
+     "eol": "2022-03-15",
+     "latest": "1.16.15"
+    },
+    {
+     "cycle": "1.15",
+     "lts": false,
+     "releaseDate": "2020-08-11",
+     "eol": "2021-08-16",
+     "latest": "1.15.15"
+    },
+    {
+     "cycle": "1.14",
+     "lts": false,
+     "releaseDate": "2020-02-25",
+     "eol": "2021-02-16",
+     "latest": "1.14.15"
+    },
+    {
+     "cycle": "1.13",
+     "lts": false,
+     "releaseDate": "2019-09-03",
+     "eol": "2020-08-11",
+     "latest": "1.13.15"
+    },
+    {
+     "cycle": "1.12",
+     "lts": false,
+     "releaseDate": "2019-02-25",
+     "eol": "2020-02-25",
+     "latest": "1.12.17"
+    },
+    {
+     "cycle": "1.11",
+     "lts": false,
+     "releaseDate": "2018-08-24",
+     "eol": "2019-09-03",
+     "latest": "1.11.13"
+    },
+    {
+     "cycle": "1.10",
+     "lts": false,
+     "releaseDate": "2018-02-16",
+     "eol": "2019-02-25",
+     "latest": "1.10.8"
+    }
+   ]
+  }
+ }
+}

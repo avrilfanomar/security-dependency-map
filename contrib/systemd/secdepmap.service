@@ -1,0 +1,34 @@
+[Unit]
+Description=secdepmap - security dependency map snapshot
+Documentation=file:@PREFIX@/README.md
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=@PREFIX@/bin/secdepmap collect --quiet --keep 60
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=15min
+
+# Read-only view of the whole system; the only writable path is the state dir.
+ProtectSystem=strict
+ReadWritePaths=/var/lib/secdepmap
+ProtectHome=read-only
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+LockPersonality=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+MemoryDenyWriteExecute=yes
+SystemCallArchitectures=native
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+# Root is needed to see other users' sockets/processes and the live firewall ruleset,
+# but it does not need to be able to do everything:
+CapabilityBoundingSet=CAP_DAC_READ_SEARCH CAP_SYS_PTRACE CAP_NET_ADMIN CAP_SETGID CAP_SETUID
+UMask=0077

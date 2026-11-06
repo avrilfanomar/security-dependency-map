@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily secdepmap snapshot (offline; compares with the previous run)
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=2h
+Persistent=true
+AccuracySec=10min
+
+[Install]
+WantedBy=timers.target
