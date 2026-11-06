@@ -122,4 +122,4 @@ secdepmap/{model,analyze,diff,enrich,openpgp,kb}.py   tools/     installer, KB r
 secdepmap/render/        html/md/dot/mermaid       tests/         python3 -I -B -m unittest discover -s tests
 ```
 
-License: MIT.
+License: Apache License 2.0 — see [LICENSE](LICENSE).
