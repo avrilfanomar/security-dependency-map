@@ -180,5 +180,93 @@ class RenderSafety(unittest.TestCase):
         self.assertNotIn("<script>", md)
 
 
+
+class OSVEnrichment(unittest.TestCase):
+    """The osv mode uploads the package inventory, so it is tested only against a stub - never the network."""
+
+    class Ctx:
+        host_id = "host:t"
+        shared = {"os_release": {"ID": "ubuntu", "VERSION_ID": "26.04", "VERSION": "26.04.1 LTS (Resolute Raccoon)"}}
+
+    def graph(self, n_extra=0):
+        g = Graph()
+        g.node("host:t", "host", "t")
+        for name in ("libfoo1", "libfoo-dev"):  # two binaries of ONE source package -> one query per ecosystem
+            g.node("pkg:deb:%s:amd64" % name, "package", name, ecosystem="deb", version="1.0-1", arch="amd64",
+                   source_pkg="foo", source_version="1.0-1")
+        g.node("pkg:pypi:user:jinja2@2.4", "package", "Jinja2", ecosystem="pypi", version="2.4")
+        for i in range(n_extra):
+            g.node("pkg:npm:x%d" % i, "package", "p%d" % i, ecosystem="npm", version="1.0.%d" % i)
+        return g
+
+    def run_osv(self, g, responder):
+        from secdepmap import enrich
+        calls = []
+
+        def fake(url, timeout=0, max_bytes=0, data=None):
+            body = json.loads(data.decode())
+            calls.append(body["queries"])
+            return 200, url, json.dumps({"results": [responder(q) for q in body["queries"]]}).encode()
+
+        orig = enrich.http_get
+        enrich.http_get = fake
+        try:
+            status = {"notes": [], "stats": {}}
+            enrich._osv(self.Ctx(), g, status)
+        finally:
+            enrich.http_get = orig
+        return calls, status
+
+    def test_queries_dedup_and_finding(self):
+        g = self.graph()
+        hit = lambda q: {"vulns": [{"id": "USN-1"}, {"id": "CVE-2"}]} if q["package"]["ecosystem"].startswith("Ubuntu:Pro") else {}
+        calls, status = self.run_osv(g, hit)
+        qs = [q for c in calls for q in c]
+        eco = sorted((q["package"]["ecosystem"], q["package"]["name"]) for q in qs)
+        # one source-package query per Ubuntu ecosystem (standard + Pro because not attached), plus one PyPI query
+        self.assertEqual(eco, [("PyPI", "Jinja2"), ("Ubuntu:26.04:LTS", "foo"), ("Ubuntu:Pro:26.04:LTS", "foo")])
+        self.assertEqual(len(calls), 1)
+        self.assertIn("osv:Ubuntu:Pro:26.04:LTS", g.findings)
+        self.assertEqual(g.findings["osv:Ubuntu:Pro:26.04:LTS"]["severity"], "high")
+        self.assertEqual(len(g.findings["osv:Ubuntu:Pro:26.04:LTS"]["nodes"]), 2)  # both binary packages marked
+        self.assertNotIn("osv:Ubuntu:26.04:LTS", g.findings)
+
+    def test_chunking_and_no_hits(self):
+        g = self.graph(n_extra=2500)
+        calls, _ = self.run_osv(g, lambda q: {})
+        self.assertGreater(len(calls), 1)
+        self.assertTrue(all(len(c) <= 1000 for c in calls))
+        self.assertFalse([f for f in g.findings if f.startswith("osv:")])
+
+    def test_network_failure_is_not_fatal(self):
+        from secdepmap import enrich
+        import urllib.error
+        orig = enrich.http_get
+
+        def boom(*a, **k):
+            raise urllib.error.URLError("offline")
+
+        enrich.http_get = boom
+        try:
+            status = {"notes": [], "stats": {}}
+            enrich._osv(self.Ctx(), self.graph(), status)
+        finally:
+            enrich.http_get = orig
+        self.assertTrue(any("OSV query failed" in n for n in status["notes"]))
+
+
+class QuietLine(unittest.TestCase):
+    def test_one_line(self):
+        from secdepmap import cli
+        g = Graph()
+        g.meta = {"hostname": "h", "collected_at": "t", "run_as": "root", "tool_version": "0", "online": []}
+        g.collectors = {"apt": {"status": "ok"}, "services": {"status": "partial"}}
+        g.finding("x", "high", "t")
+        line = cli._one_line(g.to_dict(), None, "/var/lib/secdepmap")
+        self.assertNotIn("\n", line)
+        for needle in ("host=h", "as=root", "high=1", "services=partial", "no-previous-snapshot"):
+            self.assertIn(needle, line)
+
+
 if __name__ == "__main__":
     unittest.main()

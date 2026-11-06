@@ -56,7 +56,8 @@
         "extended_support": "https://ubuntu.com/pro"
       },
       "osv_ecosystem": "Ubuntu",
-      "support_model": "Distribution security team. main/restricted: 5 years standard security maintenance per LTS. universe/multiverse: community best-effort unless Ubuntu Pro (ESM-Apps) is attached. Snaps: publisher is responsible for updates; the Snap Store distributes and verifies them."
+      "support_model": "Distribution security team. main/restricted: 5 years standard security maintenance per LTS. universe/multiverse: community best-effort unless Ubuntu Pro (ESM-Apps) is attached. Snaps: publisher is responsible for updates; the Snap Store distributes and verifies them.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "launchpad-ppa",
@@ -78,7 +79,8 @@
       "links": {
         "documentation": "https://ubuntu.com/docs/launchpad/user/Packaging/PPA/"
       },
-      "support_model": "Built on Canonical infrastructure but maintained by an individual or team. No Canonical security commitment; check the PPA owner."
+      "support_model": "Built on Canonical infrastructure but maintained by an individual or team. No Canonical security commitment; check the PPA owner.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "debian",
@@ -117,7 +119,8 @@
         "osv_feed": "https://security-tracker.debian.org/tracker/data/json"
       },
       "osv_ecosystem": "Debian",
-      "support_model": "Debian Security Team for stable (~3 years), then Debian LTS (volunteer/funded) to ~5 years."
+      "support_model": "Debian Security Team for stable (~3 years), then Debian LTS (volunteer/funded) to ~5 years.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "redhat",
@@ -146,7 +149,8 @@
         "lifecycle": "https://access.redhat.com/support/policy/updates/errata"
       },
       "osv_ecosystem": "Red Hat",
-      "support_model": "Commercial distribution security team (Product Security)."
+      "support_model": "Commercial distribution security team (Product Security).",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "fedora",
@@ -173,7 +177,8 @@
         "advisories": "https://bodhi.fedoraproject.org/updates/?type=security",
         "lifecycle": "https://docs.fedoraproject.org/en-US/releases/lifecycle/"
       },
-      "support_model": "Community distribution; each release supported ~13 months."
+      "support_model": "Community distribution; each release supported ~13 months.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "microsoft",
@@ -202,7 +207,8 @@
         "security": "https://www.microsoft.com/en-us/msrc",
         "release_notes_azure_cli": "https://learn.microsoft.com/en-us/cli/azure/release-notes-azure-cli"
       },
-      "support_model": "Vendor PSIRT (MSRC) with CVEs and CSAF documents."
+      "support_model": "Vendor PSIRT (MSRC) with CVEs and CSAF documents.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "google",
@@ -235,7 +241,8 @@
         "chrome_releases": "https://chromereleases.googleblog.com/",
         "release_notes_gcloud": "https://docs.cloud.google.com/sdk/docs/release-notes"
       },
-      "support_model": "Vendor PSIRT; product-specific release notes and bulletins."
+      "support_model": "Vendor PSIRT; product-specific release notes and bulletins.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "mozilla",
@@ -260,7 +267,8 @@
         "advisories": "https://www.mozilla.org/en-US/security/advisories/",
         "bug_bounty": "https://www.mozilla.org/en-US/security/bug-bounty/"
       },
-      "support_model": "Vendor security team; Mozilla Foundation Security Advisories (MFSA) per release."
+      "support_model": "Vendor security team; Mozilla Foundation Security Advisories (MFSA) per release.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "brave",
@@ -285,7 +293,8 @@
         "release_notes": "https://brave.com/latest/",
         "bug_bounty": "https://hackerone.com/brave"
       },
-      "support_model": "Vendor; Chromium security fixes delivered via frequent releases (release notes, HackerOne program)."
+      "support_model": "Vendor; Chromium security fixes delivered via frequent releases (release notes, HackerOne program).",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "anthropic",
@@ -318,7 +327,8 @@
         "trust": "https://trust.anthropic.com/",
         "advisories": "https://github.com/anthropics/claude-code/security/advisories"
       },
-      "support_model": "Vendor; APT repository for Claude Desktop, self-updating CLI for Claude Code."
+      "support_model": "Vendor; APT repository for Claude Desktop, self-updating CLI for Claude Code.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "coolercontrol",
@@ -344,7 +354,8 @@
       "links": {
         "project": "https://gitlab.com/coolercontrol/coolercontrol"
       },
-      "support_model": "Small open-source project; repository signed with the lead maintainer's personal key. No published security advisory process. Note: the daemon runs as root."
+      "support_model": "Small open-source project; repository signed with the lead maintainer's personal key. No published security advisory process. Note: the daemon runs as root.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "docker",
@@ -368,7 +379,8 @@
         "security": "https://docs.docker.com/security/",
         "advisories": "https://docs.docker.com/security/security-announcements/"
       },
-      "support_model": "Vendor security team."
+      "support_model": "Vendor security team.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "containerd",
@@ -385,7 +397,8 @@
       "links": {
         "advisories": "https://github.com/containerd/containerd/security/advisories"
       },
-      "support_model": "CNCF project; GitHub security advisories. /opt/containerd is a runtime plugin directory usually created by Docker/containerd packages."
+      "support_model": "CNCF project; GitHub security advisories. /opt/containerd is a runtime plugin directory usually created by Docker/containerd packages.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "hashicorp",
@@ -408,7 +421,8 @@
         "advisories": "https://discuss.hashicorp.com/c/security",
         "security": "https://www.hashicorp.com/security"
       },
-      "support_model": "Vendor security team; advisories on HashiCorp Discuss."
+      "support_model": "Vendor security team; advisories on HashiCorp Discuss.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "postgresql",
@@ -437,7 +451,8 @@
         "advisories": "https://www.postgresql.org/support/security/",
         "pgadmin": "https://www.pgadmin.org/"
       },
-      "support_model": "Community security team; per-release security advisories."
+      "support_model": "Community security team; per-release security advisories.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "nodesource",
@@ -458,7 +473,8 @@
       "links": {
         "project": "https://github.com/nodesource/distributions"
       },
-      "support_model": "Repackages Node.js releases; Node.js security releases come from the OpenJS Foundation."
+      "support_model": "Repackages Node.js releases; Node.js security releases come from the OpenJS Foundation.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "openjs",
@@ -477,7 +493,8 @@
         "lifecycle": "https://github.com/nodejs/release#release-schedule"
       },
       "osv_ecosystem": "npm",
-      "support_model": "Node.js security team; scheduled security releases for supported (LTS/current) lines only."
+      "support_model": "Node.js security team; scheduled security releases for supported (LTS/current) lines only.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "npm",
@@ -496,7 +513,8 @@
         "advisories": "https://github.com/advisories?query=ecosystem%3Anpm"
       },
       "osv_ecosystem": "npm",
-      "support_model": "Open registry: anyone can publish. Security depends on each maintainer; advisories via the GitHub Advisory Database."
+      "support_model": "Open registry: anyone can publish. Security depends on each maintainer; advisories via the GitHub Advisory Database.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "pypi",
@@ -517,7 +535,8 @@
         "advisories": "https://github.com/pypa/advisory-database"
       },
       "osv_ecosystem": "PyPI",
-      "support_model": "Open registry: anyone can publish. Advisories via the PyPA advisory database / OSV."
+      "support_model": "Open registry: anyone can publish. Advisories via the PyPA advisory database / OSV.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "crates-io",
@@ -537,7 +556,8 @@
         "advisories": "https://rustsec.org/"
       },
       "osv_ecosystem": "crates.io",
-      "support_model": "Open registry; advisories via RustSec / OSV."
+      "support_model": "Open registry; advisories via RustSec / OSV.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "rust",
@@ -558,7 +578,8 @@
       "links": {
         "security": "https://www.rust-lang.org/policies/security"
       },
-      "support_model": "Rust security response WG; only the latest stable toolchain receives fixes."
+      "support_model": "Rust security response WG; only the latest stable toolchain receives fixes.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "flathub",
@@ -581,7 +602,8 @@
         "documentation": "https://docs.flathub.org/",
         "verification": "https://docs.flathub.org/docs/for-app-authors/verification"
       },
-      "support_model": "Community-run store. Many apps are packaged by volunteers rather than the upstream vendor (look for the 'verified' badge); runtimes come from freedesktop-sdk / GNOME / KDE."
+      "support_model": "Community-run store. Many apps are packaged by volunteers rather than the upstream vendor (look for the 'verified' badge); runtimes come from freedesktop-sdk / GNOME / KDE.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "lvfs",
@@ -600,7 +622,8 @@
         "project": "https://fwupd.org/",
         "documentation": "https://lvfs.readthedocs.io/"
       },
-      "support_model": "Distribution channel; firmware content and its security fixes come from each hardware vendor."
+      "support_model": "Distribution channel; firmware content and its security fixes come from each hardware vendor.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "intel",
@@ -621,7 +644,8 @@
         "advisories": "https://www.intel.com/content/www/us/en/security-center/default.html",
         "microcode": "https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files"
       },
-      "support_model": "Vendor PSIRT (Intel Product Security Center); microcode via OS packages or OEM BIOS updates."
+      "support_model": "Vendor PSIRT (Intel Product Security Center); microcode via OS packages or OEM BIOS updates.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "amd",
@@ -639,7 +663,8 @@
       "links": {
         "advisories": "https://www.amd.com/en/resources/product-security.html"
       },
-      "support_model": "Vendor PSIRT; microcode via linux-firmware/amd64-microcode or OEM BIOS."
+      "support_model": "Vendor PSIRT; microcode via linux-firmware/amd64-microcode or OEM BIOS.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "nvidia",
@@ -666,7 +691,8 @@
       "links": {
         "advisories": "https://www.nvidia.com/en-us/security/"
       },
-      "support_model": "Vendor PSIRT; GPU driver security bulletins (proprietary kernel module - taints the kernel)."
+      "support_model": "Vendor PSIRT; GPU driver security bulletins (proprietary kernel module - taints the kernel).",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "samsung-semi",
@@ -683,7 +709,8 @@
       "links": {
         "firmware": "https://semiconductor.samsung.com/consumer-storage/support/tools/"
       },
-      "support_model": "SSD firmware updates published by the vendor; rarely via LVFS."
+      "support_model": "SSD firmware updates published by the vendor; rarely via LVFS.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "zoom",
@@ -705,7 +732,8 @@
       "links": {
         "advisories": "https://www.zoom.com/en/trust/security-bulletin/"
       },
-      "support_model": "Vendor PSIRT with a public security bulletin. Linux .deb has no APT repository; updates are manual."
+      "support_model": "Vendor PSIRT with a public security bulletin. Linux .deb has no APT repository; updates are manual.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "obsidian",
@@ -726,7 +754,8 @@
         "security": "https://obsidian.md/security",
         "release_notes": "https://obsidian.md/changelog/"
       },
-      "support_model": "Vendor; app self-updates its asar bundle, the .deb itself only updates manually."
+      "support_model": "Vendor; app self-updates its asar bundle, the .deb itself only updates manually.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "sublimehq",
@@ -750,7 +779,8 @@
       "links": {
         "release_notes": "https://www.sublimetext.com/download"
       },
-      "support_model": "Small vendor; no public advisory feed. Has an official APT repository (download.sublimetext.com)."
+      "support_model": "Small vendor; no public advisory feed. Has an official APT repository (download.sublimetext.com).",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "iit",
@@ -772,7 +802,8 @@
       "links": {
         "homepage": "https://iit.com.ua/"
       },
-      "support_model": "Vendor of qualified e-signature software (EUSW). No public security advisory feed; packages installed manually."
+      "support_model": "Vendor of qualified e-signature software (EUSW). No public security advisory feed; packages installed manually.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "weasis",
@@ -790,7 +821,8 @@
         "project": "https://github.com/nroduit/Weasis",
         "releases": "https://github.com/nroduit/Weasis/releases"
       },
-      "support_model": "Open-source project; bundles its own Java runtime - JRE fixes depend on new Weasis releases."
+      "support_model": "Open-source project; bundles its own Java runtime - JRE fixes depend on new Weasis releases.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "spotify",
@@ -810,7 +842,8 @@
       "links": {
         "bug_bounty": "https://hackerone.com/spotify"
       },
-      "support_model": "Vendor; no public advisory feed for the desktop client."
+      "support_model": "Vendor; no public advisory feed for the desktop client.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "videolan",
@@ -830,7 +863,8 @@
       "links": {
         "advisories": "https://www.videolan.org/security/"
       },
-      "support_model": "Open-source project with published security bulletins."
+      "support_model": "Open-source project with published security bulletins.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "slack",
@@ -851,7 +885,8 @@
         "security": "https://slack.com/trust/security",
         "bug_bounty": "https://hackerone.com/slack"
       },
-      "support_model": "Vendor. The Flathub build is a community repackaging of the official binary."
+      "support_model": "Vendor. The Flathub build is a community repackaging of the official binary.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "telegram",
@@ -871,7 +906,8 @@
       "links": {
         "bug_bounty": "https://core.telegram.org/bug-bounty"
       },
-      "support_model": "Vendor; open-source desktop client, no public advisory feed."
+      "support_model": "Vendor; open-source desktop client, no public advisory feed.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "openprinting",
@@ -889,7 +925,8 @@
         "project": "https://openprinting.github.io/",
         "advisories": "https://github.com/OpenPrinting/cups/security/advisories"
       },
-      "support_model": "Linux Foundation project; GitHub security advisories."
+      "support_model": "Linux Foundation project; GitHub security advisories.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "kde",
@@ -912,7 +949,8 @@
       "links": {
         "advisories": "https://kde.org/info/security/"
       },
-      "support_model": "Community security team with published advisories."
+      "support_model": "Community security team with published advisories.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "ollama",
@@ -931,7 +969,8 @@
         "advisories": "https://github.com/ollama/ollama/security",
         "releases": "https://github.com/ollama/ollama/releases"
       },
-      "support_model": "Vendor; Linux install script places a binary in /usr/local with no update channel."
+      "support_model": "Vendor; Linux install script places a binary in /usr/local with no update channel.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "charmbracelet",
@@ -948,7 +987,8 @@
       "links": {
         "project": "https://github.com/charmbracelet/glow"
       },
-      "support_model": "Open-source project; unverified Snap Store publisher account."
+      "support_model": "Open-source project; unverified Snap Store publisher account.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "minizinc",
@@ -965,7 +1005,8 @@
       "links": {
         "project": "https://www.minizinc.org/"
       },
-      "support_model": "Academic open-source project; no security advisory process."
+      "support_model": "Academic open-source project; no security advisory process.",
+      "links_verified": "2026-11-06"
     },
     {
       "id": "apache-groovy",
@@ -983,7 +1024,8 @@
         "security": "https://groovy-lang.org/security.html",
         "asf_security": "https://www.apache.org/security/"
       },
-      "support_model": "Apache Software Foundation security process."
+      "support_model": "Apache Software Foundation security process.",
+      "links_verified": "2026-11-06"
     }
   ]
 }

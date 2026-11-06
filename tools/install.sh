@@ -92,6 +92,10 @@ if [ "$GIT" -eq 1 ] && [ -d "$SRC/.git" ] && [ ! -L "$SRC/.git" ]; then
   [ -e "$PREFIX/.git" ] && mv "$PREFIX/.git" "$PREFIX/.git.old"
   mv "$PREFIX/.git.new" "$PREFIX/.git"
   rm -rf "$PREFIX/.git.old"
+  if command -v git >/dev/null 2>&1; then
+    # rebuild the index so `git status` reflects the installed tree; ignore any user/system git config
+    GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_SYSTEM=/dev/null git -C "$PREFIX" reset -q 2>/dev/null || true
+  fi
   echo "==> repository history installed (read it as a user: git -c safe.directory=$PREFIX -C $PREFIX log --oneline)"
 fi
 
