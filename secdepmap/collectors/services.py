@@ -237,7 +237,7 @@ def collect(ctx, g):
     fw = firewall_state(ctx)
     g.nodes[hid]["attrs"]["firewall"] = fw
     exposed_tcp = []
-    user_udp = {}
+    user_eph = {}
     for l in listeners:
         scope = scope_of(l["addr"])
         lid = "listener:%s:%s:%d" % (l["proto"], l["addr"] if l["addr"] not in ("*", "0.0.0.0") else "0.0.0.0", l["port"])
@@ -245,9 +245,21 @@ def collect(ctx, g):
             lid = "listener:%s:[::]:%d" % (l["proto"], l["port"])
         unit, kind = unit_of(l["cgroup"])
         label = "%s %s:%d" % (l["proto"], "*" if scope == "all-interfaces" else l["addr"], l["port"])
-        g.node(lid, "listener", label, proto=l["proto"], address=l["addr"], port=l["port"], scope=scope,
-               iface=l["iface"], uid=l["uid"], cgroup=l["cgroup"], unit=unit,
-               processes=[p["comm"] for p in l["procs"]] or None)
+        # Ephemeral ports of per-user session processes (browsers, chat apps) change on every run. Key those
+        # listeners by process+protocol+scope so snapshots and diffs stay stable instead of flapping.
+        ephemeral = kind != "system" and l["port"] >= 32768 and l["procs"] and scope not in ("loopback", "multicast")
+        if ephemeral:
+            comm = l["procs"][0]["comm"]
+            lid = "listener:%s:ephemeral:%s:%s" % (l["proto"], comm, scope)
+            label = "%s ephemeral ports (%s, %s)" % (l["proto"], comm, scope)
+            prev = g.nodes.get(lid, {}).get("attrs", {}).get("ports", [])
+            ports = sorted(set(prev) | {l["port"]})
+            g.node(lid, "listener", label, proto=l["proto"], address=l["addr"], port=None, ports=ports, ephemeral=True,
+                   scope=scope, uid=l["uid"], unit=unit, processes=[comm])
+        else:
+            g.node(lid, "listener", label, proto=l["proto"], address=l["addr"], port=l["port"], scope=scope,
+                   iface=l["iface"], uid=l["uid"], cgroup=l["cgroup"], unit=unit,
+                   processes=[p["comm"] for p in l["procs"]] or None)
         g.edge(hid, lid, "listens")
         target = None
         if unit and kind == "system":
@@ -275,8 +287,8 @@ def collect(ctx, g):
             svc_name = unit or (l["procs"][0]["comm"] if l["procs"] else "unknown process")
         if l["proto"] == "udp" and l["port"] in BENIGN_UDP:
             continue
-        if l["proto"] == "udp" and kind == "user" and l["port"] >= 32768:
-            user_udp.setdefault(svc_name, []).append((l["port"], lid, target))
+        if ephemeral:
+            user_eph.setdefault((l["proto"], svc_name), []).append((l["port"], lid, target))
             continue
         sev = {"no": "high", "unknown": "medium", "probably": "low", "yes": "low"}[fw["filtering"]]
         if l["proto"] == "udp" and sev == "high":
@@ -293,11 +305,12 @@ def collect(ctx, g):
                               "(e.g. 'sudo ufw enable' + explicit allow rules).", category="exposure")
         if l["proto"] == "tcp":
             exposed_tcp.append(l["port"])
-    for name, items in user_udp.items():
-        g.finding("net.user-udp:" + name.split()[0], "low",
-                  "%s has %d UDP socket(s) on ephemeral ports bound to all interfaces" % (name, len(items)),
+    for (proto, name), items in user_eph.items():
+        g.finding("net.user-ephemeral:%s:%s" % (proto, name.split()[0]), "low",
+                  "%s has %d %s socket(s) on ephemeral ports bound to all interfaces" % (name, len(items), proto.upper()),
                   "Typical for browsers/media apps (WebRTC, cast/mDNS discovery). Reachable from the LAN while no firewall "
-                  "filters inbound traffic.", nodes=[x[1] for x in items] + [x[2] for x in items if x[2]][:1],
+                  "filters inbound traffic. Point-in-time: these ports change between runs.",
+                  nodes=sorted({x[1] for x in items}) + [x[2] for x in items if x[2]][:1],
                   evidence={"ports": sorted(x[0] for x in items)}, category="exposure")
     if fw["filtering"] == "no" and exposed_tcp:
         g.finding("net.firewall.none", "high", "No host firewall filtering while %d TCP port(s) are exposed" % len(set(exposed_tcp)),

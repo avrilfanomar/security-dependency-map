@@ -232,13 +232,14 @@ def build(snap, diff=None):
         pkg = first(svc, "runs") if svc else None
         src = pkg_source.get(pkg) if pkg else None
         sa = nodes[svc]["attrs"] if svc in nodes else {}
-        exposure.append({"id": l, "proto": a.get("proto"), "addr": a.get("address"), "port": a.get("port"),
+        exposure.append({"id": l, "proto": a.get("proto"), "addr": a.get("address"),
+                         "port": a.get("port") if a.get("port") is not None else ("ephemeral (%d)" % len(a.get("ports") or [])),
                          "scope": a.get("scope"), "service": label(svc) if svc else (", ".join(a.get("processes") or []) or "?"),
                          "user": sa.get("user"), "exposure": sa.get("exposure"), "rating": sa.get("exposure_rating"),
                          "package": ("%s %s" % (label(pkg), nodes[pkg]["attrs"].get("version", ""))) if pkg in nodes else "",
                          "source": label(src) if src else "", "vendor": vendor_of_source(src) if src else "",
                          "risk": n.get("risk")})
-    exposure.sort(key=lambda x: (x["scope"] == "loopback", x["proto"], x["port"]))
+    exposure.sort(key=lambda x: (x["scope"] == "loopback", x["proto"], x["port"] if isinstance(x["port"], int) else 99999))
 
     inv_cols = ["name", "version", "eco", "class", "source", "vendor", "risk", "scope", "id"]
     inv = []

@@ -1,7 +1,7 @@
 #!/bin/sh
 # Install secdepmap system-wide: /opt/secdepmap (root-owned, not writable by users).
 #
-#   sudo tools/install.sh [--timer] [--no-link] [--prefix /opt/secdepmap]
+#   sudo tools/install.sh [--timer] [--no-link] [--no-git] [--prefix /opt/secdepmap]
 #
 # Why root:root and no group/other write: this tool is meant to be run as root
 # (full firewall / socket / home-directory visibility) and optionally from a
@@ -9,18 +9,26 @@
 # user, otherwise "edit the report script" becomes "become root".
 set -eu
 
+# Never trust the caller's PATH: sudo's secure_path on Ubuntu begins with /usr/local/sbin, which on some
+# machines is writable by an ordinary user. Everything below runs as root.
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+export PATH
+umask 022
+
 PREFIX=/opt/secdepmap
 STATE=${SECDEPMAP_STATE_DIR:-/var/lib/secdepmap}
 ETC=${SECDEPMAP_ETC_DIR:-/etc/secdepmap}
 LINK=1
 TIMER=0
+GIT=1
 
 while [ $# -gt 0 ]; do
   case "$1" in
     --timer)   TIMER=1 ;;
     --no-link) LINK=0 ;;
+    --no-git)  GIT=0 ;;
     --prefix)  shift; PREFIX=${1:?--prefix needs a path} ;;
-    -h|--help) sed -n '2,12p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,14p' "$0"; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
   shift
@@ -67,6 +75,24 @@ if ! python3 -I -B -m unittest discover -s "$PREFIX/tests" >/dev/null 2>&1; then
   echo "!! self-test FAILED for $PREFIX; not linking or enabling anything." >&2
   echo "   run: python3 -I -B -m unittest discover -s $PREFIX/tests -v" >&2
   exit 1
+fi
+
+# Ship the history as a root-owned repository (objects/refs only; a fresh minimal config and no hooks, so
+# nothing from the user's .git/config - fsmonitor, hooksPath, aliases - is ever executed by root).
+if [ "$GIT" -eq 1 ] && [ -d "$SRC/.git" ] && [ ! -L "$SRC/.git" ]; then
+  rm -rf "$PREFIX/.git.new"
+  mkdir "$PREFIX/.git.new"
+  for x in objects refs HEAD packed-refs; do
+    [ -e "$SRC/.git/$x" ] && cp -R "$SRC/.git/$x" "$PREFIX/.git.new/$x"
+  done
+  printf '[core]\n\trepositoryformatversion = 0\n\tfilemode = true\n\tbare = false\n' > "$PREFIX/.git.new/config"
+  chown -R root:root "$PREFIX/.git.new"
+  chmod -R go-w,u+rwX,go+rX "$PREFIX/.git.new"
+  rm -rf "$PREFIX/.git.old"
+  [ -e "$PREFIX/.git" ] && mv "$PREFIX/.git" "$PREFIX/.git.old"
+  mv "$PREFIX/.git.new" "$PREFIX/.git"
+  rm -rf "$PREFIX/.git.old"
+  echo "==> repository history installed (read it as a user: git -c safe.directory=$PREFIX -C $PREFIX log --oneline)"
 fi
 
 install -d -m 0700 -o root -g root "$STATE"

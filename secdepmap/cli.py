@@ -129,6 +129,8 @@ def run_collect(args):
 
     if not args.quiet:
         _print_summary(snap, dres, outputs)
+    else:
+        print(_one_line(snap, dres, state_dir))
     return _exit_code(snap, args.fail_on)
 
 
@@ -154,6 +156,19 @@ def _exit_code(snap, fail_on):
         return 0
     lim = SEV_RANK[fail_on]
     return 2 if any(SEV_RANK[f["severity"]] <= lim for f in snap["findings"]) else 0
+
+
+def _one_line(snap, dres, state_dir):
+    """Single line for logs/journal: collector health, severity counts and what changed."""
+    sev = snap["summary"]["findings_by_severity"]
+    cols = ",".join("%s=%s" % (k, v["status"]) for k, v in snap["collectors"].items())
+    chg = "no-previous-snapshot" if dres is None else ("changes=none" if dres["empty"] else
+          "new_findings=%d resolved_findings=%d pkgs+%d/-%d/~%d" % (
+              len(dres["findings_new"]), len(dres["findings_resolved"]), len(dres["packages_added"]),
+              len(dres["packages_removed"]), len(dres["packages_changed"])))
+    return "secdepmap %s host=%s as=%s findings[%s] collectors[%s] %s state=%s" % (
+        __version__, snap["meta"]["hostname"], snap["meta"]["run_as"],
+        " ".join("%s=%d" % (k, sev[k]) for k in SEVERITIES), cols, chg, state_dir)
 
 
 def _print_summary(snap, dres, outputs):
